@@ -10,10 +10,10 @@ public class TestGameInitialization {
 	Game game = new Game();
 
 	@Test public void questions_Size() {
-		assertEquals(50, game.popQuestions.size());
-		assertEquals(50, game.scienceQuestions.size());
-		assertEquals(50, game.sportsQuestions.size());
-		assertEquals(50, game.rockQuestions.size());
+		assertEquals(AllTestsHelper.TOTAL_QUESTIONS, game.popQuestions.size());
+		assertEquals(AllTestsHelper.TOTAL_QUESTIONS, game.scienceQuestions.size());
+		assertEquals(AllTestsHelper.TOTAL_QUESTIONS, game.sportsQuestions.size());
+		assertEquals(AllTestsHelper.TOTAL_QUESTIONS, game.rockQuestions.size());
 	}
 	
 	@Test public void first_Question() {

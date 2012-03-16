@@ -6,14 +6,12 @@ import static org.junit.Assert.assertTrue;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.io.PrintStream;
 
 import org.junit.Test;
 
 
 public class TestGameAdd {
 
-	private static final String LINE_SEPARATOR = System.getProperty("line.separator");
 	Game game = new Game();
 
 	@Test public void player_Name_Added() {
@@ -31,17 +29,13 @@ public class TestGameAdd {
 	}
 	
 	@Test public void output_Message() throws IOException {
-		PrintStream systemOut = System.out;
-		
-		ByteArrayOutputStream spyOutput = new ByteArrayOutputStream();
-		System.setOut(new PrintStream(spyOutput));
+		ByteArrayOutputStream spyOutput = AllTestsHelper.createSpySystemOut();
 		
 		game.add("Player1");
-		assertEquals("Player1 was added" + LINE_SEPARATOR + 
-				"They are player number 1" + LINE_SEPARATOR, spyOutput.toString());
+		assertEquals("Player1 was added" + AllTestsHelper.LINE_SEPARATOR + 
+				"They are player number 1" + AllTestsHelper.LINE_SEPARATOR, spyOutput.toString());
 		
-		spyOutput.close();
-		System.setOut(systemOut);
+		AllTestsHelper.restoreSystemOutAndCloseSpyOutput(spyOutput);
 	}
 	
 }
