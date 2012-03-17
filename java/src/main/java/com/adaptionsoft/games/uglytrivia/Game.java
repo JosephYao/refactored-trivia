@@ -37,10 +37,10 @@ public class Game {
 	    
 		initializePlayerStatus(playerIndex);
 	    
-	    addMessageOutput(playerName, playerIndex + 1);
+	    addOutputMessage(playerName, playerIndex + 1);
 	}
 
-	private void addMessageOutput(String playerName, int playerIndex) {
+	private void addOutputMessage(String playerName, int playerIndex) {
 		System.out.println(playerName + " was added");
 	    System.out.println("They are player number " + playerIndex);
 	}
@@ -52,48 +52,49 @@ public class Game {
 	}
 	
 	public void roll(int roll) {
-		System.out.println(players.get(currentPlayer) + " is the current player");
-		System.out.println("They have rolled a " + roll);
+		rollOutputMessage(roll);
 		
-		internalRoll(roll);
-		
+		if (!isCurrentPlayerInPenaltyBox() || isGettingOutOfPenaltyBox(roll)) {
+			rollWhenNotInPenaltyBox(roll);
+		}
 	}
 
-	protected void internalRoll(int roll) {
-		if (isCurrentPlayerInPenaltyBox()) {
-			internalRollWhenInPenaltyBox(roll);
-			
-		} else {
-		
-			internalRollWhenNotInPenaltyBox(roll);
-		}
+	protected void rollOutputMessage(int roll) {
+		System.out.println(players.get(currentPlayer) + " is the current player");
+		System.out.println("They have rolled a " + roll);
 	}
 
 	protected boolean isCurrentPlayerInPenaltyBox() {
 		return inPenaltyBox[currentPlayer];
 	}
 
-	void internalRollWhenInPenaltyBox(int roll) {
-		if (roll % 2 != 0) {
-			isGettingOutOfPenaltyBox = true;
-			
+	private boolean isGettingOutOfPenaltyBox(int roll) {
+		isGettingOutOfPenaltyBox = roll % 2 != 0;
+		if (isGettingOutOfPenaltyBox) {
 			System.out.println(players.get(currentPlayer) + " is getting out of the penalty box");
-			internalRollWhenNotInPenaltyBox(roll);
 		} else {
 			System.out.println(players.get(currentPlayer) + " is not getting out of the penalty box");
-			isGettingOutOfPenaltyBox = false;
-			}
+		}
+		return isGettingOutOfPenaltyBox;
 	}
 
-	void internalRollWhenNotInPenaltyBox(int roll) {
-		places[currentPlayer] = getCurrentPlayerPlace() + roll;
-		if (getCurrentPlayerPlace() > 11) places[currentPlayer] = getCurrentPlayerPlace() - 12;
+	void rollWhenNotInPenaltyBox(int roll) {
+		setCurrentPlayerPlace(roll);
 		
+		rollWhenNotInPenaltyBoxOutputMessage();
+		
+		askQuestion();
+	}
+
+	private void rollWhenNotInPenaltyBoxOutputMessage() {
 		System.out.println(players.get(currentPlayer) 
 				+ "'s new location is " 
 				+ getCurrentPlayerPlace());
 		System.out.println("The category is " + currentCategory());
-		askQuestion();
+	}
+
+	private void setCurrentPlayerPlace(int roll) {
+		places[currentPlayer] = (getCurrentPlayerPlace() + roll) % 12;
 	}
 
 	void askQuestion() {

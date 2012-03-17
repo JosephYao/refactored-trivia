@@ -24,7 +24,11 @@ public class TestGameRollOutputMessage extends Game {
 		AllTestsHelper.restoreSystemOutAndCloseSpyOutput(spyOutput);
 	}
 	
-	protected void internalRoll(int roll) {
+	protected void internalRollWhenInPenaltyBox(int roll) {
+		
+	}
+	
+	protected void rollWhenNotInPenaltyBox(int roll) {
 		
 	}
 	

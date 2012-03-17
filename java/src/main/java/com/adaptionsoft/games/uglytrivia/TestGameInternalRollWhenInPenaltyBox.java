@@ -16,10 +16,10 @@ public class TestGameInternalRollWhenInPenaltyBox extends Game {
 	private int internalRollWhenNotInPenaltyBoxParameterRoll;
 
 	@Test public void roll_Is_Not_Multiple_Of_2_isGettingOutOfPenaltyBox() {
-		Game game = new Game();
+		Game game = new TestGameInternalRollWhenInPenaltyBox();
 		game.add("Player1");
 		
-		game.internalRollWhenInPenaltyBox(3);
+		game.roll(3);
 		
 		assertTrue(game.isGettingOutOfPenaltyBox);
 	}
@@ -30,7 +30,7 @@ public class TestGameInternalRollWhenInPenaltyBox extends Game {
 		
 		ByteArrayOutputStream spyOutput = AllTestsHelper.createSpySystemOut();
 		
-		game.internalRollWhenInPenaltyBox(3);
+		game.roll(3);
 		
 		assertEquals("Player1 is getting out of the penalty box" + AllTestsHelper.LINE_SEPARATOR, spyOutput.toString());
 		
@@ -41,7 +41,7 @@ public class TestGameInternalRollWhenInPenaltyBox extends Game {
 		TestGameInternalRollWhenInPenaltyBox game = new TestGameInternalRollWhenInPenaltyBox();
 		game.add("Player1");
 		
-		game.internalRollWhenInPenaltyBox(3);
+		game.roll(3);
 		
 		assertTrue(game.internalRollWhenNotInPenaltyBoxIsCalled);
 		assertEquals(3, game.internalRollWhenNotInPenaltyBoxParameterRoll);
@@ -51,7 +51,7 @@ public class TestGameInternalRollWhenInPenaltyBox extends Game {
 		Game game = new Game();
 		game.add("Player1");
 		
-		game.internalRollWhenInPenaltyBox(2);
+		game.roll(2);
 		
 		assertFalse(game.isGettingOutOfPenaltyBox);
 	}
@@ -62,7 +62,7 @@ public class TestGameInternalRollWhenInPenaltyBox extends Game {
 		
 		ByteArrayOutputStream spyOutput = AllTestsHelper.createSpySystemOut();
 		
-		game.internalRollWhenInPenaltyBox(2);
+		game.roll(2);
 		
 		assertEquals("Player1 is not getting out of the penalty box" + AllTestsHelper.LINE_SEPARATOR, spyOutput.toString());
 		
@@ -73,12 +73,20 @@ public class TestGameInternalRollWhenInPenaltyBox extends Game {
 		TestGameInternalRollWhenInPenaltyBox game = new TestGameInternalRollWhenInPenaltyBox();
 		game.add("Player1");
 		
-		game.internalRollWhenInPenaltyBox(2);
+		game.roll(2);
 		
 		assertFalse(game.internalRollWhenNotInPenaltyBoxIsCalled);
 	}
 	
-	protected void internalRollWhenNotInPenaltyBox(int roll) {
+	protected boolean isCurrentPlayerInPenaltyBox() {
+		return true;
+	}
+	
+	protected void rollOutputMessage(int roll) {
+		
+	}
+	
+	protected void rollWhenNotInPenaltyBox(int roll) {
 		internalRollWhenNotInPenaltyBoxIsCalled = true;
 		internalRollWhenNotInPenaltyBoxParameterRoll = roll;
 	}

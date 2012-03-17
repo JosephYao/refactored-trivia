@@ -16,7 +16,7 @@ public class TestGameInternalRollWhenNotInPenaltyBoxForOutputMessage extends Gam
 		
 		ByteArrayOutputStream spyOutput = AllTestsHelper.createSpySystemOut();
 		
-		game.internalRollWhenNotInPenaltyBox(1);
+		game.rollWhenNotInPenaltyBox(1);
 		
 		assertEquals("Player1's new location is 1" + AllTestsHelper.LINE_SEPARATOR +
 					"The category is Category1" + AllTestsHelper.LINE_SEPARATOR, spyOutput.toString());
