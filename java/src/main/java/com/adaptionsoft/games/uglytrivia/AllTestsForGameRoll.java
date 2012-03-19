@@ -14,6 +14,6 @@ import org.junit.runners.Suite.SuiteClasses;
 	TestGameAskQuestion.class,
 	TestGameInternalRollWhenInPenaltyBox.class
 })
-public class AllTestsForGame {
+public class AllTestsForGameRoll {
 
 }

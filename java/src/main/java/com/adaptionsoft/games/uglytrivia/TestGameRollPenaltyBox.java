@@ -5,17 +5,16 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 
 
 public class TestGameRollPenaltyBox extends Game {
 
+	private static final int ROLL_GET_OUT_OF_PENALTY_BOX = 2;
+	private static final int ROLL_NOT_GET_OUT_OF_PENALTY_BOX = 1;
 	private boolean isCurrentPlayerInPenaltyBox;
-	private boolean internalRollWhenInPenaltyBoxIsCalled;
 	private boolean internalRollWhenNotInPenaltyBoxIsCalled;
 	private TestGameRollPenaltyBox game;
-	private int internalRollWhenInPenaltyBoxParameterRoll;
 	private int internalRollWhenNotInPenaltyBoxParameterRoll;
 
 	@Before public void createGameAndAddPlayer() {
@@ -23,22 +22,32 @@ public class TestGameRollPenaltyBox extends Game {
 		game.add("Player1");
 	}
 	
-	@Ignore @Test public void current_Player_In_Penalty_Box() {
+	@Test public void current_Player_In_Penalty_Box_And_Is_Not_Get_Out_Of_Penalty_Box() {
 		game.setIsCurrentPlayerInPenaltyBox(true);
-		game.roll(1);
+		gameRollNotGettingOutOfPenaltyBox();
 		
-		assertTrue(game.internalRollWhenInPenaltyBoxIsCalled);
-		assertEquals(1, game.internalRollWhenInPenaltyBoxParameterRoll);
 		assertFalse(game.internalRollWhenNotInPenaltyBoxIsCalled);
 	}
 
-	@Test public void current_Player_Not_In_Penalty_Box() {
-		game.setIsCurrentPlayerInPenaltyBox(false);
-		game.roll(1);
+	@Test public void current_Player_In_Penalty_Box_And_Is_Get_Out_Of_Penalty_Box() {
+		game.setIsCurrentPlayerInPenaltyBox(true);
+		gameRollGettingOutOfPenaltyBox();
 		
-		assertTrue(game.internalRollWhenNotInPenaltyBoxIsCalled);
-		assertEquals(1, game.internalRollWhenNotInPenaltyBoxParameterRoll);
-		assertFalse(game.internalRollWhenInPenaltyBoxIsCalled);
+		assertInternalRollWhenNotInPenaltyBoxIsCalledWithCorrectParameter(ROLL_NOT_GET_OUT_OF_PENALTY_BOX);
+	}
+
+	@Test public void current_Player_Not_In_Penalty_Box_And_Is_Not_Get_Out_Of_Penalty_Box() {
+		game.setIsCurrentPlayerInPenaltyBox(false);
+		gameRollNotGettingOutOfPenaltyBox();
+		
+		assertInternalRollWhenNotInPenaltyBoxIsCalledWithCorrectParameter(ROLL_GET_OUT_OF_PENALTY_BOX);
+	}
+	
+	@Test public void current_Player_Not_In_Penalty_Box_And_Is_Get_Out_Of_Penalty_Box() {
+		game.setIsCurrentPlayerInPenaltyBox(false);
+		gameRollGettingOutOfPenaltyBox();
+		
+		assertInternalRollWhenNotInPenaltyBoxIsCalledWithCorrectParameter(ROLL_NOT_GET_OUT_OF_PENALTY_BOX);
 	}
 	
 	protected void rollWhenNotInPenaltyBox(int roll) {
@@ -46,6 +55,19 @@ public class TestGameRollPenaltyBox extends Game {
 		internalRollWhenNotInPenaltyBoxParameterRoll = roll;
 	}
 	
+	private void assertInternalRollWhenNotInPenaltyBoxIsCalledWithCorrectParameter(int parameterRoll) {
+		assertTrue(game.internalRollWhenNotInPenaltyBoxIsCalled);
+		assertEquals(parameterRoll, game.internalRollWhenNotInPenaltyBoxParameterRoll);
+	}
+
+	private void gameRollNotGettingOutOfPenaltyBox() {
+		game.roll(2);
+	}
+
+	private void gameRollGettingOutOfPenaltyBox() {
+		game.roll(1);
+	}
+
 	private void setIsCurrentPlayerInPenaltyBox(boolean value) {
 		isCurrentPlayerInPenaltyBox = value;
 	}
