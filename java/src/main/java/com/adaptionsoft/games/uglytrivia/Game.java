@@ -139,40 +139,57 @@ public class Game {
 		}
 	}
 
-	private boolean wasCorrectlyAnsweredWhenCurrentPlayerNotInPenaltyBox() {
+	protected boolean wasCorrectlyAnsweredWhenCurrentPlayerNotInPenaltyBox() {
+		purses[currentPlayer]++;
+
+		wasCorrectlyAnsweredWhenCurrentPlayerNotInPenaltyBoxOutputMessage();
+		
+		boolean winner = isCurrentPlayerWin();
+
+		currentPlayerMoveToNext();
+		
+		return winner;
+	}
+
+	private void wasCorrectlyAnsweredWhenCurrentPlayerNotInPenaltyBoxOutputMessage() {
 		System.out.println("Answer was corrent!!!!");
+		System.out.println(players.get(currentPlayer) 
+				+ " now has "
+				+ purses[currentPlayer]
+				+ " Gold Coins.");
+	}
+
+	protected boolean wasCorrectlyAnsweredWhenCurrentPlayerInPenaltyBox() {
+		if (isGettingOutOfPenaltyBox()) {
+			return wasCorrectlyAnsweredWhenCurrentPlayerInPenaltyBox_When_isGettingOutOfPenaltyBox();
+		} else {
+			return wasCorrectlyAnsweredWhenCurrentPlayerInPenaltyBox_When_Not_isGettingOutOfPenaltyBox();
+		}
+	}
+
+	protected boolean wasCorrectlyAnsweredWhenCurrentPlayerInPenaltyBox_When_Not_isGettingOutOfPenaltyBox() {
+		currentPlayer++;
+		if (currentPlayer == players.size()) currentPlayer = 0;
+		return true;
+	}
+
+	protected boolean wasCorrectlyAnsweredWhenCurrentPlayerInPenaltyBox_When_isGettingOutOfPenaltyBox() {
+		System.out.println("Answer was correct!!!!");
 		purses[currentPlayer]++;
 		System.out.println(players.get(currentPlayer) 
 				+ " now has "
 				+ purses[currentPlayer]
 				+ " Gold Coins.");
 		
-		boolean winner = didPlayerWin();
+		boolean winner = isCurrentPlayerWin();
 		currentPlayer++;
 		if (currentPlayer == players.size()) currentPlayer = 0;
 		
 		return winner;
 	}
 
-	private boolean wasCorrectlyAnsweredWhenCurrentPlayerInPenaltyBox() {
-		if (isGettingOutOfPenaltyBox) {
-			System.out.println("Answer was correct!!!!");
-			purses[currentPlayer]++;
-			System.out.println(players.get(currentPlayer) 
-					+ " now has "
-					+ purses[currentPlayer]
-					+ " Gold Coins.");
-			
-			boolean winner = didPlayerWin();
-			currentPlayer++;
-			if (currentPlayer == players.size()) currentPlayer = 0;
-			
-			return winner;
-		} else {
-			currentPlayer++;
-			if (currentPlayer == players.size()) currentPlayer = 0;
-			return true;
-		}
+	protected boolean isGettingOutOfPenaltyBox() {
+		return isGettingOutOfPenaltyBox;
 	}
 	
 	public boolean wrongAnswer(){
@@ -180,7 +197,7 @@ public class Game {
 
 		currentPlayerGoIntoPenaltyBox();
 		
-		setCurrentPlayer();
+		currentPlayerMoveToNext();
 
 		return true;
 	}
@@ -189,7 +206,7 @@ public class Game {
 		inPenaltyBox[currentPlayer] = true;
 	}
 
-	private void setCurrentPlayer() {
+	private void currentPlayerMoveToNext() {
 		currentPlayer = (currentPlayer + 1) % players.size();
 	}
 
@@ -199,7 +216,7 @@ public class Game {
 	}
 
 
-	private boolean didPlayerWin() {
+	private boolean isCurrentPlayerWin() {
 		return !(purses[currentPlayer] == 6);
 	}
 }
