@@ -168,8 +168,7 @@ public class Game {
 	}
 
 	protected boolean wasCorrectlyAnsweredWhenCurrentPlayerInPenaltyBox_When_Not_isGettingOutOfPenaltyBox() {
-		currentPlayer++;
-		if (currentPlayer == players.size()) currentPlayer = 0;
+		currentPlayerMoveToNext();
 		return true;
 	}
 
