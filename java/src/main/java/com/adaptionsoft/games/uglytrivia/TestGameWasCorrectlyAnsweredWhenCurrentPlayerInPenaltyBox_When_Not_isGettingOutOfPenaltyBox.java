@@ -24,18 +24,10 @@ public class TestGameWasCorrectlyAnsweredWhenCurrentPlayerInPenaltyBox_When_Not_
 		assertEquals(1, game.currentPlayer);
 	}
 
-	@Test public void called_Twice_First_And_Second_Player_In_Penalty_Box() {
-		game.wrongAnswer();
-		game.wrongAnswer();
-		
-		assertTrue(game.inPenaltyBox[0]);
-		assertTrue(game.inPenaltyBox[1]);
-	}
-	
 	@Test public void called_Three_Times_Current_Player_Back_To_First() {
-		game.wrongAnswer();
-		game.wrongAnswer();
-		game.wrongAnswer();
+		game.wasCorrectlyAnsweredWhenCurrentPlayerInPenaltyBox_When_Not_isGettingOutOfPenaltyBox();
+		game.wasCorrectlyAnsweredWhenCurrentPlayerInPenaltyBox_When_Not_isGettingOutOfPenaltyBox();
+		game.wasCorrectlyAnsweredWhenCurrentPlayerInPenaltyBox_When_Not_isGettingOutOfPenaltyBox();
 		
 		assertEquals(0, game.currentPlayer);
 	}

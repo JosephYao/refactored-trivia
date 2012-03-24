@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 
 import org.junit.Test;
 
@@ -12,7 +13,7 @@ public class TestGameWasCorrectlyAnsweredWhenCurrentPlayerNotInPenaltyBox {
 
 	private Game game;
 
-	@Test public void wasCorrectlyAnsweredWhenCurrentPlayerNotInPenaltyBox_Output_Message() {
+	@Test public void wasCorrectlyAnsweredWhenCurrentPlayerNotInPenaltyBox_Output_Message() throws IOException {
 		createGameWithOnePlayer();
 		ByteArrayOutputStream spyOutput = AllTestsHelper.createSpySystemOut();
 		
@@ -20,6 +21,8 @@ public class TestGameWasCorrectlyAnsweredWhenCurrentPlayerNotInPenaltyBox {
 		
 		assertEquals("Answer was corrent!!!!" + AllTestsHelper.LINE_SEPARATOR + 
 					"Player1 now has 1 Gold Coins." + AllTestsHelper.LINE_SEPARATOR, spyOutput.toString());
+		
+		AllTestsHelper.restoreSystemOutAndCloseSpyOutput(spyOutput);
 	}
 
 	@Test public void wasCorrectlyAnsweredWhenCurrentPlayerNotInPenaltyBox_Current_Player_Purses_Increased_By_One() {
