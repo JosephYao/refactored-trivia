@@ -19,7 +19,7 @@ public class TestGameWasCorrectlyAnsweredWhenCurrentPlayerNotInPenaltyBox {
 		
 		game.wasCorrectlyAnsweredWhenCurrentPlayerNotInPenaltyBox();
 		
-		assertEquals("Answer was corrent!!!!" + AllTestsHelper.LINE_SEPARATOR + 
+		assertEquals("Answer was correct!!!!" + AllTestsHelper.LINE_SEPARATOR + 
 					"Player1 now has 1 Gold Coins." + AllTestsHelper.LINE_SEPARATOR, spyOutput.toString());
 		
 		AllTestsHelper.restoreSystemOutAndCloseSpyOutput(spyOutput);

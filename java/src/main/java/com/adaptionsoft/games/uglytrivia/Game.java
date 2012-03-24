@@ -156,7 +156,7 @@ public class Game {
 	}
 
 	private void wasCorrectlyAnsweredWhenCurrentPlayerNotInPenaltyBoxOutputMessage() {
-		System.out.println("Answer was corrent!!!!");
+		System.out.println("Answer was correct!!!!");
 		System.out.println(players.get(currentPlayer) 
 				+ " now has "
 				+ purses[currentPlayer]
