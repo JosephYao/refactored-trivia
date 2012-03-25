@@ -9,9 +9,9 @@ import org.junit.Test;
 public class TestGameWasCorrectlyAnsweredWhenCurrentPlayerInPenaltyBox extends Game {
 
 	private boolean isGettingOutOfPenaltyBoxFlag;
-	private boolean wasCorrectlyAnsweredWhenCurrentPlayerInPenaltyBox_When_isGettingOutOfPenaltyBox_IsCalled;
 	private boolean wasCorrectlyAnsweredWhenCurrentPlayerInPenaltyBox_When_Not_isGettingOutOfPenaltyBox_IsCalled;
 	private TestGameWasCorrectlyAnsweredWhenCurrentPlayerInPenaltyBox game;
+	private boolean wasCorrectlyAnsweredWhenCurrentPlayerNotInPenaltyBox_IsCalled;
 
 	@Before public void createGameAndAddPlayer() {
 		game = new TestGameWasCorrectlyAnsweredWhenCurrentPlayerInPenaltyBox();
@@ -22,7 +22,7 @@ public class TestGameWasCorrectlyAnsweredWhenCurrentPlayerInPenaltyBox extends G
 		game.setIsGettingOutOfPenaltyBoxFlag(true);
 		game.wasCorrectlyAnsweredWhenCurrentPlayerInPenaltyBox();
 		
-		assertTrue(game.wasCorrectlyAnsweredWhenCurrentPlayerInPenaltyBox_When_isGettingOutOfPenaltyBox_IsCalled);
+		assertTrue(game.wasCorrectlyAnsweredWhenCurrentPlayerNotInPenaltyBox_IsCalled);
 	}
 
 	@Test public void is_Not_Getting_Out_Of_Penalty_Box() {
@@ -40,8 +40,8 @@ public class TestGameWasCorrectlyAnsweredWhenCurrentPlayerInPenaltyBox extends G
 		isGettingOutOfPenaltyBoxFlag = value;
 	}
 	
-	protected boolean wasCorrectlyAnsweredWhenCurrentPlayerInPenaltyBox_When_isGettingOutOfPenaltyBox() {
-		wasCorrectlyAnsweredWhenCurrentPlayerInPenaltyBox_When_isGettingOutOfPenaltyBox_IsCalled = true;
+	protected boolean wasCorrectlyAnsweredWhenCurrentPlayerNotInPenaltyBox() {
+		wasCorrectlyAnsweredWhenCurrentPlayerNotInPenaltyBox_IsCalled = true;
 		return true;
 	}
 	

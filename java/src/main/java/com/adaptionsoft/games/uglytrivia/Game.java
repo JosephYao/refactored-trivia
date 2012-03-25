@@ -165,7 +165,7 @@ public class Game {
 
 	protected boolean wasCorrectlyAnsweredWhenCurrentPlayerInPenaltyBox() {
 		if (isGettingOutOfPenaltyBox()) {
-			return wasCorrectlyAnsweredWhenCurrentPlayerInPenaltyBox_When_isGettingOutOfPenaltyBox();
+			return wasCorrectlyAnsweredWhenCurrentPlayerNotInPenaltyBox();
 		} else {
 			return wasCorrectlyAnsweredWhenCurrentPlayerInPenaltyBox_When_Not_isGettingOutOfPenaltyBox();
 		}
@@ -174,26 +174,6 @@ public class Game {
 	protected boolean wasCorrectlyAnsweredWhenCurrentPlayerInPenaltyBox_When_Not_isGettingOutOfPenaltyBox() {
 		currentPlayerMoveToNext();
 		return true;
-	}
-
-	protected boolean wasCorrectlyAnsweredWhenCurrentPlayerInPenaltyBox_When_isGettingOutOfPenaltyBox() {
-		currentPlayerPursesIncreasedByOne();
-
-		wasCorrectlyAnsweredWhenCurrentPlayerInPenaltyBox_When_isGettingOutOfPenaltyBox_OutputMessage();
-		
-		boolean winner = isCurrentPlayerWin();
-
-		currentPlayerMoveToNext();
-		
-		return winner;
-	}
-
-	private void wasCorrectlyAnsweredWhenCurrentPlayerInPenaltyBox_When_isGettingOutOfPenaltyBox_OutputMessage() {
-		System.out.println("Answer was correct!!!!");
-		System.out.println(players.get(currentPlayer) 
-				+ " now has "
-				+ purses[currentPlayer]
-				+ " Gold Coins.");
 	}
 
 	protected boolean isGettingOutOfPenaltyBox() {
