@@ -133,7 +133,12 @@ public class Game {
 
 	public boolean wasCorrectlyAnswered() {
 		if (isCurrentPlayerInPenaltyBox()){
-			return wasCorrectlyAnsweredWhenCurrentPlayerInPenaltyBox();
+			if (isGettingOutOfPenaltyBox()) {
+				return wasCorrectlyAnsweredWhenCurrentPlayerNotInPenaltyBox();
+			} else {
+				currentPlayerMoveToNext();
+				return true;
+			}
 		} else {
 			return wasCorrectlyAnsweredWhenCurrentPlayerNotInPenaltyBox();
 		}
@@ -161,15 +166,6 @@ public class Game {
 				+ " now has "
 				+ purses[currentPlayer]
 				+ " Gold Coins.");
-	}
-
-	protected boolean wasCorrectlyAnsweredWhenCurrentPlayerInPenaltyBox() {
-		if (isGettingOutOfPenaltyBox()) {
-			return wasCorrectlyAnsweredWhenCurrentPlayerNotInPenaltyBox();
-		} else {
-			currentPlayerMoveToNext();
-			return true;
-		}
 	}
 
 	protected boolean isGettingOutOfPenaltyBox() {
