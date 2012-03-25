@@ -167,13 +167,9 @@ public class Game {
 		if (isGettingOutOfPenaltyBox()) {
 			return wasCorrectlyAnsweredWhenCurrentPlayerNotInPenaltyBox();
 		} else {
-			return wasCorrectlyAnsweredWhenCurrentPlayerInPenaltyBox_When_Not_isGettingOutOfPenaltyBox();
+			currentPlayerMoveToNext();
+			return true;
 		}
-	}
-
-	protected boolean wasCorrectlyAnsweredWhenCurrentPlayerInPenaltyBox_When_Not_isGettingOutOfPenaltyBox() {
-		currentPlayerMoveToNext();
-		return true;
 	}
 
 	protected boolean isGettingOutOfPenaltyBox() {

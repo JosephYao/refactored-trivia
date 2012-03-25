@@ -10,8 +10,7 @@ import org.junit.runners.Suite.SuiteClasses;
 	TestGameWrongAnswer.class,
 	TestGameWasCorrectlyAnswered.class,
 	TestGameWasCorrectlyAnsweredWhenCurrentPlayerNotInPenaltyBox.class,
-	TestGameWasCorrectlyAnsweredWhenCurrentPlayerInPenaltyBox.class,
-	TestGameWasCorrectlyAnsweredWhenCurrentPlayerInPenaltyBox_When_Not_isGettingOutOfPenaltyBox.class
+	TestGameWasCorrectlyAnsweredWhenCurrentPlayerInPenaltyBox.class
 })
 public class AllTests {
 
