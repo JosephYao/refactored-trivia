@@ -132,28 +132,19 @@ public class Game {
 	}
 
 	public boolean wasCorrectlyAnswered() {
-		if (isCurrentPlayerInPenaltyBox()){
-			if (isGettingOutOfPenaltyBox()) {
-				return wasCorrectlyAnsweredWhenCurrentPlayerNotInPenaltyBox();
-			} else {
-				currentPlayerMoveToNext();
-				return true;
-			}
-		} else {
-			return wasCorrectlyAnsweredWhenCurrentPlayerNotInPenaltyBox();
+		boolean notAWinner = true;
+		
+		if (!isCurrentPlayerInPenaltyBox() || isGettingOutOfPenaltyBox()) {
+			currentPlayerPursesIncreasedByOne();
+
+			wasCorrectlyAnsweredWhenCurrentPlayerNotInPenaltyBoxOutputMessage();
+			
+			notAWinner = isCurrentPlayerNotWin();
 		}
-	}
-
-	protected boolean wasCorrectlyAnsweredWhenCurrentPlayerNotInPenaltyBox() {
-		currentPlayerPursesIncreasedByOne();
-
-		wasCorrectlyAnsweredWhenCurrentPlayerNotInPenaltyBoxOutputMessage();
 		
-		boolean winner = isCurrentPlayerWin();
-
 		currentPlayerMoveToNext();
-		
-		return winner;
+
+		return notAWinner;
 	}
 
 	private void currentPlayerPursesIncreasedByOne() {
@@ -195,7 +186,7 @@ public class Game {
 		System.out.println(players.get(currentPlayer)+ " was sent to the penalty box");
 	}
 
-	private boolean isCurrentPlayerWin() {
+	private boolean isCurrentPlayerNotWin() {
 		return !(purses[currentPlayer] == 6);
 	}
 }
