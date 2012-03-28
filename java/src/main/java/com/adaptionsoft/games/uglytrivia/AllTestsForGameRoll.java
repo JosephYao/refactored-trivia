@@ -6,8 +6,6 @@ import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
 @SuiteClasses({
-	TestGameInitialization.class,
-	TestGameAdd.class,
 	TestsForRoll.class,
 	TestsForInternalRollWhenNotInPenaltyBox.class,
 	TestGameCurrentCategory.class,

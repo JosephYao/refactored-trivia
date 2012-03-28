@@ -106,7 +106,7 @@ public class TestGameAskQuestion extends Game {
 		currentCategory = theCurrentCategory;
 	}
 	
-	String currentCategory() {
+	protected String currentCategory() {
 		return currentCategory;
 	}
 	

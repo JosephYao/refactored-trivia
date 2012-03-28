@@ -107,24 +107,12 @@ public class Game {
 		if (currentCategory() == "Rock")
 			System.out.println(rockQuestions.removeFirst());		
 	}
-		
-	String currentCategory() {
-		switch (getCurrentPlayerPlace()) {
-		case 0:
-		case 4:
-		case 8:
-			return "Pop";
-		case 1:
-		case 5:
-		case 9:
-			return "Science";
-		case 2:
-		case 6:
-		case 10:
-			return "Sports";
-		default:
-			return "Rock";
-		}
+	
+	private static final String[] CATEGORIES = 
+		new String[]{"Pop", "Science", "Sports", "Rock", "Pop", "Science", "Sports", "Rock", "Pop", "Science", "Sports", "Rock"};
+	
+	protected String currentCategory() {
+		return CATEGORIES[getCurrentPlayerPlace()];
 	}
 
 	protected int getCurrentPlayerPlace() {
