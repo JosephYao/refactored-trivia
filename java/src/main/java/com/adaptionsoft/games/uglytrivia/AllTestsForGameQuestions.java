@@ -6,12 +6,11 @@ import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
 @SuiteClasses({
-	TestGameAdd.class,
-	AllTestsForGameRoll.class,
-	TestGameWrongAnswer.class,
-	TestGameWasCorrectlyAnswered.class,
-	AllTestsForGameQuestions.class
+	TestGameQuestionsOutputMessage.class,
+	TestGameQuestionsSizeOfQuestion.class,
+	TestGameQuestionsInitialization.class,
+	TestGameQuestionsCurrentCategory.class
 })
-public class AllTests {
+public class AllTestsForGameQuestions {
 
 }

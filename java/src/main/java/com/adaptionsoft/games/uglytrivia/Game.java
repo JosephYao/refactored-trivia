@@ -1,7 +1,6 @@
 package com.adaptionsoft.games.uglytrivia;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 
 public class Game {
     ArrayList<String> players = new ArrayList<String>();
@@ -9,26 +8,14 @@ public class Game {
     int[] purses  = new int[6];
     boolean[] inPenaltyBox  = new boolean[6];
     
-    LinkedList<String> popQuestions = new LinkedList<String>();
-    LinkedList<String> scienceQuestions = new LinkedList<String>();
-    LinkedList<String> sportsQuestions = new LinkedList<String>();
-    LinkedList<String> rockQuestions = new LinkedList<String>();
-    
     int currentPlayer = 0;
     boolean isGettingOutOfPenaltyBox;
     
+    GameQuestions questions;
+    
     public  Game(){
-    	for (int i = 0; i < 50; i++) {
-			initializeQuestions(i);
-    	}
+    	questions = new GameQuestions();
     }
-
-	private void initializeQuestions(int i) {
-		popQuestions.addLast("Pop Question " + i);
-		scienceQuestions.addLast(("Science Question " + i));
-		sportsQuestions.addLast(("Sports Question " + i));
-		rockQuestions.addLast(("Rock Question " + i));
-	}
 
 	public void add(String playerName) {
 	    players.add(playerName);
@@ -98,21 +85,11 @@ public class Game {
 	}
 
 	void askQuestion() {
-		if (currentCategory() == "Pop")
-			System.out.println(popQuestions.removeFirst());
-		if (currentCategory() == "Science")
-			System.out.println(scienceQuestions.removeFirst());
-		if (currentCategory() == "Sports")
-			System.out.println(sportsQuestions.removeFirst());
-		if (currentCategory() == "Rock")
-			System.out.println(rockQuestions.removeFirst());		
+		questions.askQuestion(getCurrentPlayerPlace());		
 	}
 	
-	private static final String[] CATEGORIES = 
-		new String[]{"Pop", "Science", "Sports", "Rock", "Pop", "Science", "Sports", "Rock", "Pop", "Science", "Sports", "Rock"};
-	
 	protected String currentCategory() {
-		return CATEGORIES[getCurrentPlayerPlace()];
+		return questions.currentCategory(getCurrentPlayerPlace());
 	}
 
 	protected int getCurrentPlayerPlace() {

@@ -8,8 +8,6 @@ import org.junit.runners.Suite.SuiteClasses;
 @SuiteClasses({
 	TestsForRoll.class,
 	TestsForInternalRollWhenNotInPenaltyBox.class,
-	TestGameCurrentCategory.class,
-	TestGameAskQuestion.class,
 	TestGameInternalRollWhenInPenaltyBox.class
 })
 public class AllTestsForGameRoll {

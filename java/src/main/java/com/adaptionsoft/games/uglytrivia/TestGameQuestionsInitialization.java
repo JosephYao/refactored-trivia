@@ -5,9 +5,9 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 
-public class TestGameInitialization {
+public class TestGameQuestionsInitialization {
 
-	Game game = new Game();
+	GameQuestions game = new GameQuestions();
 
 	@Test public void questions_Size() {
 		assertEquals(AllTestsHelper.TOTAL_QUESTIONS, game.popQuestions.size());
