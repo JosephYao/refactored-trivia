@@ -14,7 +14,11 @@ public class Game {
     GameQuestions questions;
     
     public  Game(){
-    	questions = new GameQuestions();
+    	this(new GameQuestions());
+    }
+    
+    public Game(GameQuestions theQuestions) {
+    	questions = theQuestions;
     }
 
 	public void add(String playerName) {
@@ -70,26 +74,18 @@ public class Game {
 		
 		rollWhenNotInPenaltyBoxOutputMessage();
 		
-		askQuestion();
+		questions.askQuestion(getCurrentPlayerPlace());
 	}
 
 	private void rollWhenNotInPenaltyBoxOutputMessage() {
 		System.out.println(players.get(currentPlayer) 
 				+ "'s new location is " 
 				+ getCurrentPlayerPlace());
-		System.out.println("The category is " + currentCategory());
+		System.out.println("The category is " + questions.currentCategory(getCurrentPlayerPlace()));
 	}
 
 	private void setCurrentPlayerPlace(int roll) {
 		places[currentPlayer] = (getCurrentPlayerPlace() + roll) % 12;
-	}
-
-	void askQuestion() {
-		questions.askQuestion(getCurrentPlayerPlace());		
-	}
-	
-	protected String currentCategory() {
-		return questions.currentCategory(getCurrentPlayerPlace());
 	}
 
 	protected int getCurrentPlayerPlace() {

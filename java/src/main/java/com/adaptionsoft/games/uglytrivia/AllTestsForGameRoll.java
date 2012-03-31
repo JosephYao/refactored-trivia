@@ -7,7 +7,7 @@ import org.junit.runners.Suite.SuiteClasses;
 @RunWith(Suite.class)
 @SuiteClasses({
 	TestsForRoll.class,
-	TestsForInternalRollWhenNotInPenaltyBox.class,
+	TestGameRollWhenNotInPenaltyBox.class,
 	TestGameInternalRollWhenInPenaltyBox.class
 })
 public class AllTestsForGameRoll {
