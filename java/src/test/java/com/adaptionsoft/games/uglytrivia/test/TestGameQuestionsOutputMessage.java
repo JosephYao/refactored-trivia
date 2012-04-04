@@ -1,4 +1,4 @@
-package com.adaptionsoft.games.uglytrivia;
+package com.adaptionsoft.games.uglytrivia.test;
 
 import static org.junit.Assert.assertEquals;
 
@@ -11,6 +11,9 @@ import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+
+import com.adaptionsoft.games.uglytrivia.AllTestsHelper;
+import com.adaptionsoft.games.uglytrivia.GameQuestions;
 
 @RunWith(Parameterized.class)
 public class TestGameQuestionsOutputMessage {

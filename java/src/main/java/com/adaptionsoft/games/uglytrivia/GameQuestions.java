@@ -4,10 +4,10 @@ import java.util.LinkedList;
 
 public class GameQuestions {
 
-    LinkedList<String> popQuestions = new LinkedList<String>();
-    LinkedList<String> scienceQuestions = new LinkedList<String>();
-    LinkedList<String> sportsQuestions = new LinkedList<String>();
-    LinkedList<String> rockQuestions = new LinkedList<String>();
+    private LinkedList<String> popQuestions = new LinkedList<String>();
+    private LinkedList<String> scienceQuestions = new LinkedList<String>();
+    private LinkedList<String> sportsQuestions = new LinkedList<String>();
+    private LinkedList<String> rockQuestions = new LinkedList<String>();
 
     public GameQuestions() {
     	for (int i = 0; i < 50; i++) {
@@ -38,6 +38,22 @@ public class GameQuestions {
 	
 	public String currentCategory(int currentPlayerPlace) {
 		return CATEGORIES[currentPlayerPlace];
+	}
+
+    public LinkedList<String> getPopQuestions() {
+		return popQuestions;
+	}
+
+	public LinkedList<String> getScienceQuestions() {
+		return scienceQuestions;
+	}
+
+	public LinkedList<String> getSportsQuestions() {
+		return sportsQuestions;
+	}
+
+	public LinkedList<String> getRockQuestions() {
+		return rockQuestions;
 	}
 
 }

@@ -31,7 +31,7 @@ public class TestGameRollWhenNotInPenaltyBox {
 	
 	@Before public void createStubGameQuestionsAndGameAndThenAddOnePlayer() {
 		stubGameQuestions = new StubGameQuestions();
-		game = new Game(stubGameQuestions);
+		game = new Game(stubGameQuestions, new GamePlayers());
 		game.add("Player1");
 	}
 	

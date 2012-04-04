@@ -12,13 +12,15 @@ public class Game {
     boolean isGettingOutOfPenaltyBox;
     
     GameQuestions questions;
+    GamePlayers gamePlayers;
     
     public  Game(){
-    	this(new GameQuestions());
+    	this(new GameQuestions(), new GamePlayers());
     }
     
-    public Game(GameQuestions theQuestions) {
+    public Game(GameQuestions theQuestions, GamePlayers thePlayers) {
     	questions = theQuestions;
+    	gamePlayers = thePlayers;
     }
 
 	public void add(String playerName) {
