@@ -24,49 +24,28 @@ public class Game {
     }
 
 	public void add(String playerName) {
-	    players.add(playerName);
-	    
-	    int playerIndex = players.size() - 1;
-	    
-		initializePlayerStatus(playerIndex);
-	    
-	    addOutputMessage(playerName, playerIndex + 1);
+		gamePlayers.add(playerName);
 	}
 
-	private void addOutputMessage(String playerName, int playerIndex) {
-		System.out.println(playerName + " was added");
-	    System.out.println("They are player number " + playerIndex);
-	}
-
-	private void initializePlayerStatus(int playerIndex) {
-		places[playerIndex] = 0;
-	    purses[playerIndex] = 0;
-	    inPenaltyBox[playerIndex] = false;
-	}
-	
 	public void roll(int roll) {
 		rollOutputMessage(roll);
 		
-		if (!isCurrentPlayerInPenaltyBox() || isGettingOutOfPenaltyBox(roll)) {
+		if (!gamePlayers.isCurrentPlayerInPenaltyBox() || isGettingOutOfPenaltyBox(roll)) {
 			rollWhenNotInPenaltyBox(roll);
 		}
 	}
 
 	protected void rollOutputMessage(int roll) {
-		System.out.println(players.get(currentPlayer) + " is the current player");
+		System.out.println(gamePlayers.getCurrentPlayer() + " is the current player");
 		System.out.println("They have rolled a " + roll);
 	}
 
-	protected boolean isCurrentPlayerInPenaltyBox() {
-		return inPenaltyBox[currentPlayer];
-	}
-
-	private boolean isGettingOutOfPenaltyBox(int roll) {
+	protected boolean isGettingOutOfPenaltyBox(int roll) {
 		isGettingOutOfPenaltyBox = roll % 2 != 0;
 		if (isGettingOutOfPenaltyBox) {
-			System.out.println(players.get(currentPlayer) + " is getting out of the penalty box");
+			System.out.println(gamePlayers.getCurrentPlayer() + " is getting out of the penalty box");
 		} else {
-			System.out.println(players.get(currentPlayer) + " is not getting out of the penalty box");
+			System.out.println(gamePlayers.getCurrentPlayer() + " is not getting out of the penalty box");
 		}
 		return isGettingOutOfPenaltyBox;
 	}
@@ -80,24 +59,24 @@ public class Game {
 	}
 
 	private void rollWhenNotInPenaltyBoxOutputMessage() {
-		System.out.println(players.get(currentPlayer) 
+		System.out.println(gamePlayers.getCurrentPlayer() 
 				+ "'s new location is " 
 				+ getCurrentPlayerPlace());
 		System.out.println("The category is " + questions.currentCategory(getCurrentPlayerPlace()));
 	}
 
 	private void setCurrentPlayerPlace(int roll) {
-		places[currentPlayer] = (getCurrentPlayerPlace() + roll) % 12;
+		gamePlayers.setCurrentPlayerPlace(roll);
 	}
 
 	protected int getCurrentPlayerPlace() {
-		return places[currentPlayer];
+		return gamePlayers.getCurrentPlayerPlace();
 	}
 
 	public boolean wasCorrectlyAnswered() {
 		boolean notAWinner = true;
 		
-		if (!isCurrentPlayerInPenaltyBox() || isGettingOutOfPenaltyBox()) {
+		if (!gamePlayers.isCurrentPlayerInPenaltyBox() || isGettingOutOfPenaltyBox()) {
 			currentPlayerPursesIncreasedByOne();
 
 			wasCorrectlyAnsweredWhenCurrentPlayerNotInPenaltyBoxOutputMessage();
@@ -111,14 +90,14 @@ public class Game {
 	}
 
 	private void currentPlayerPursesIncreasedByOne() {
-		purses[currentPlayer]++;
+		gamePlayers.currentPlayerPursesIncreasedByOne();
 	}
 
 	private void wasCorrectlyAnsweredWhenCurrentPlayerNotInPenaltyBoxOutputMessage() {
 		System.out.println("Answer was correct!!!!");
-		System.out.println(players.get(currentPlayer) 
+		System.out.println(gamePlayers.getCurrentPlayer() 
 				+ " now has "
-				+ purses[currentPlayer]
+				+ gamePlayers.getCurrentPlayerPurses()
 				+ " Gold Coins.");
 	}
 
@@ -137,19 +116,19 @@ public class Game {
 	}
 
 	private void currentPlayerGoIntoPenaltyBox() {
-		inPenaltyBox[currentPlayer] = true;
+		gamePlayers.currentPlayerGoIntoPenaltyBox();
 	}
 
 	private void currentPlayerMoveToNext() {
-		currentPlayer = (currentPlayer + 1) % players.size();
+		gamePlayers.currentPlayerMoveToNext();
 	}
 
 	private void wrongAnswerOutputMessage() {
 		System.out.println("Question was incorrectly answered");
-		System.out.println(players.get(currentPlayer)+ " was sent to the penalty box");
+		System.out.println(gamePlayers.getCurrentPlayer()+ " was sent to the penalty box");
 	}
 
 	private boolean isCurrentPlayerNotWin() {
-		return !(purses[currentPlayer] == 6);
+		return gamePlayers.isCurrentPlayerNotWin();
 	}
 }

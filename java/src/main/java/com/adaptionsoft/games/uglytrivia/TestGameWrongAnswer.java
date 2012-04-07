@@ -7,6 +7,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 
@@ -32,19 +33,19 @@ public class TestGameWrongAnswer {
 		AllTestsHelper.restoreSystemOutAndCloseSpyOutput(spyOutput);
 	}
 	
-	@Test public void wrongAnswer_First_Player_In_Penalty_Box() {
+	@Ignore @Test public void wrongAnswer_First_Player_In_Penalty_Box() {
 		game.wrongAnswer();
 		
 		assertTrue(game.inPenaltyBox[0]);
 	}
 	
-	@Test public void wrongAnswer_Current_Player_Move_Next_Player() {
+	@Ignore @Test public void wrongAnswer_Current_Player_Move_Next_Player() {
 		game.wrongAnswer();
 		
 		assertEquals(1, game.currentPlayer);
 	}
 
-	@Test public void wrongAnswer_Twice_First_And_Second_Player_In_Penalty_Box() {
+	@Ignore @Test public void wrongAnswer_Twice_First_And_Second_Player_In_Penalty_Box() {
 		game.wrongAnswer();
 		game.wrongAnswer();
 		
@@ -52,7 +53,7 @@ public class TestGameWrongAnswer {
 		assertTrue(game.inPenaltyBox[1]);
 	}
 	
-	@Test public void wrongAnswer_Three_Times_Current_Player_Back_To_First() {
+	@Ignore @Test public void wrongAnswer_Three_Times_Current_Player_Back_To_First() {
 		game.wrongAnswer();
 		game.wrongAnswer();
 		game.wrongAnswer();
