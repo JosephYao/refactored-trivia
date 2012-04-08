@@ -18,6 +18,8 @@ public class TestGameRoll extends Game {
 	private class MockGame extends Game {
 		private boolean rollWhenNotInPenaltyBoxIsCalled;
 		private int rollWhenNotInPenaltyBoxParameterRoll;
+		private boolean rollOutputMessageIsCalled;
+		private int rollOutputMessageParameterRoll;
 
 		public MockGame(GameQuestions gameQuestions, GamePlayers gamePlayers) {
 			super(gameQuestions, gamePlayers);
@@ -26,6 +28,11 @@ public class TestGameRoll extends Game {
 		protected void rollWhenNotInPenaltyBox(int roll) {
 			rollWhenNotInPenaltyBoxIsCalled = true;
 			rollWhenNotInPenaltyBoxParameterRoll = roll;
+		}
+		
+		protected void rollOutputMessage(int roll) {
+			rollOutputMessageIsCalled = true;
+			rollOutputMessageParameterRoll = roll;
 		}
 	}
 	
@@ -41,18 +48,22 @@ public class TestGameRoll extends Game {
 			isCurrentPlayerInPenaltyBox = value;
 		}
 		
+		public String getCurrentPlayer() {
+			return "Player1";
+		}
+		
 	}
 	
 	@Before public void createGameAndAddPlayer() {
 		stubGamePlayers = new StubGamePlayers();
 		mockGame = new MockGame(new GameQuestions(), stubGamePlayers);
-		mockGame.add("Player1");
 	}
 	
 	@Test public void current_Player_In_Penalty_Box_And_Is_Not_Get_Out_Of_Penalty_Box() {
 		stubGamePlayers.setIsCurrentPlayerInPenaltyBox(true);
 		mockGame.roll(ROLL_NOT_GET_OUT_OF_PENALTY_BOX);
 		
+		assertRollOutputMessageIsCalledWithCorrectParameter(ROLL_NOT_GET_OUT_OF_PENALTY_BOX);
 		assertFalse(mockGame.rollWhenNotInPenaltyBoxIsCalled);
 	}
 
@@ -60,6 +71,7 @@ public class TestGameRoll extends Game {
 		stubGamePlayers.setIsCurrentPlayerInPenaltyBox(true);
 		mockGame.roll(ROLL_GET_OUT_OF_PENALTY_BOX);
 		
+		assertRollOutputMessageIsCalledWithCorrectParameter(ROLL_GET_OUT_OF_PENALTY_BOX);
 		assertRollWhenNotInPenaltyBoxIsCalledWithCorrectParameter(ROLL_GET_OUT_OF_PENALTY_BOX);
 	}
 
@@ -67,6 +79,7 @@ public class TestGameRoll extends Game {
 		stubGamePlayers.setIsCurrentPlayerInPenaltyBox(false);
 		mockGame.roll(ROLL_NOT_GET_OUT_OF_PENALTY_BOX);
 		
+		assertRollOutputMessageIsCalledWithCorrectParameter(ROLL_NOT_GET_OUT_OF_PENALTY_BOX);
 		assertRollWhenNotInPenaltyBoxIsCalledWithCorrectParameter(ROLL_NOT_GET_OUT_OF_PENALTY_BOX);
 	}
 	
@@ -74,6 +87,7 @@ public class TestGameRoll extends Game {
 		stubGamePlayers.setIsCurrentPlayerInPenaltyBox(false);
 		mockGame.roll(ROLL_GET_OUT_OF_PENALTY_BOX);
 		
+		assertRollOutputMessageIsCalledWithCorrectParameter(ROLL_GET_OUT_OF_PENALTY_BOX);
 		assertRollWhenNotInPenaltyBoxIsCalledWithCorrectParameter(ROLL_GET_OUT_OF_PENALTY_BOX);
 	}
 	
@@ -82,4 +96,9 @@ public class TestGameRoll extends Game {
 		assertEquals(parameterRoll, mockGame.rollWhenNotInPenaltyBoxParameterRoll);
 	}
 
+	private void assertRollOutputMessageIsCalledWithCorrectParameter(int parameterRoll) {
+		assertTrue(mockGame.rollOutputMessageIsCalled);
+		assertEquals(parameterRoll, mockGame.rollOutputMessageParameterRoll);
+	}
+	
 }

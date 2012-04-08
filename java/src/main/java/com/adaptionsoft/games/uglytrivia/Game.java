@@ -51,26 +51,18 @@ public class Game {
 	}
 
 	void rollWhenNotInPenaltyBox(int roll) {
-		setCurrentPlayerPlace(roll);
+		gamePlayers.setCurrentPlayerPlace(roll);
 		
 		rollWhenNotInPenaltyBoxOutputMessage();
 		
-		questions.askQuestion(getCurrentPlayerPlace());
+		questions.askQuestion(gamePlayers.getCurrentPlayerPlace());
 	}
 
-	private void rollWhenNotInPenaltyBoxOutputMessage() {
+	protected void rollWhenNotInPenaltyBoxOutputMessage() {
 		System.out.println(gamePlayers.getCurrentPlayer() 
 				+ "'s new location is " 
-				+ getCurrentPlayerPlace());
-		System.out.println("The category is " + questions.currentCategory(getCurrentPlayerPlace()));
-	}
-
-	private void setCurrentPlayerPlace(int roll) {
-		gamePlayers.setCurrentPlayerPlace(roll);
-	}
-
-	protected int getCurrentPlayerPlace() {
-		return gamePlayers.getCurrentPlayerPlace();
+				+ gamePlayers.getCurrentPlayerPlace());
+		System.out.println("The category is " + questions.currentCategory(gamePlayers.getCurrentPlayerPlace()));
 	}
 
 	public boolean wasCorrectlyAnswered() {

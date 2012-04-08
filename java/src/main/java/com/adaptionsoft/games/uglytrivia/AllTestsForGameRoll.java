@@ -7,7 +7,8 @@ import org.junit.runners.Suite.SuiteClasses;
 @RunWith(Suite.class)
 @SuiteClasses({
 	TestGameRollWhenNotInPenaltyBox.class,
-	TestGameIsGettingOutOfPenaltyBoxWithRoll.class,
+	TestGameRollWhenNotInPenaltyBoxOutputMessage.class,
+	TestGameIsGettingOutOfPenaltyBoxWithRollOutputMessage.class,
 	TestGameRoll.class,
 	TestGameRollOutputMessage.class
 })
