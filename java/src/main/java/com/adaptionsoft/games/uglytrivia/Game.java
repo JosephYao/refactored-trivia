@@ -1,20 +1,12 @@
 package com.adaptionsoft.games.uglytrivia;
 
-import java.util.ArrayList;
-
 public class Game {
-    ArrayList<String> players = new ArrayList<String>();
-    int[] places = new int[6];
-    int[] purses  = new int[6];
-    boolean[] inPenaltyBox  = new boolean[6];
-    
-    int currentPlayer = 0;
     boolean isGettingOutOfPenaltyBox;
     
     GameQuestions questions;
     GamePlayers gamePlayers;
     
-    public  Game(){
+    public Game() {
     	this(new GameQuestions(), new GamePlayers());
     }
     
@@ -69,20 +61,16 @@ public class Game {
 		boolean notAWinner = true;
 		
 		if (!gamePlayers.isCurrentPlayerInPenaltyBox() || isGettingOutOfPenaltyBox()) {
-			currentPlayerPursesIncreasedByOne();
+			gamePlayers.currentPlayerPursesIncreasedByOne();
 
 			wasCorrectlyAnsweredWhenCurrentPlayerNotInPenaltyBoxOutputMessage();
 			
-			notAWinner = isCurrentPlayerNotWin();
+			notAWinner = gamePlayers.isCurrentPlayerNotWin();
 		}
 		
-		currentPlayerMoveToNext();
+		gamePlayers.currentPlayerMoveToNext();
 
 		return notAWinner;
-	}
-
-	private void currentPlayerPursesIncreasedByOne() {
-		gamePlayers.currentPlayerPursesIncreasedByOne();
 	}
 
 	private void wasCorrectlyAnsweredWhenCurrentPlayerNotInPenaltyBoxOutputMessage() {
@@ -100,27 +88,15 @@ public class Game {
 	public boolean wrongAnswer(){
 		wrongAnswerOutputMessage();
 
-		currentPlayerGoIntoPenaltyBox();
+		gamePlayers.currentPlayerGoIntoPenaltyBox();
 		
-		currentPlayerMoveToNext();
+		gamePlayers.currentPlayerMoveToNext();
 
 		return true;
-	}
-
-	private void currentPlayerGoIntoPenaltyBox() {
-		gamePlayers.currentPlayerGoIntoPenaltyBox();
-	}
-
-	private void currentPlayerMoveToNext() {
-		gamePlayers.currentPlayerMoveToNext();
 	}
 
 	private void wrongAnswerOutputMessage() {
 		System.out.println("Question was incorrectly answered");
 		System.out.println(gamePlayers.getCurrentPlayer()+ " was sent to the penalty box");
-	}
-
-	private boolean isCurrentPlayerNotWin() {
-		return gamePlayers.isCurrentPlayerNotWin();
 	}
 }

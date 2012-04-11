@@ -7,22 +7,23 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 
 
 public class TestGameWrongAnswer {
 
 	Game game;
+	GamePlayers players;
 
 	@Before public void createGameAndPlayers() {
-		game = new Game();
+		players = new GamePlayers();
+		game = new Game(new GameQuestions(), players);
 		game.add("Player1");
 		game.add("Player2");
 		game.add("Player3");
 	}
 	
-	@Test public void wrongAnswer_Output_Message() throws IOException {
+	@Test public void output_Message() throws IOException {
 		ByteArrayOutputStream spyOutput = AllTestsHelper.createSpySystemOut();
 		
 		game.wrongAnswer();
@@ -33,35 +34,35 @@ public class TestGameWrongAnswer {
 		AllTestsHelper.restoreSystemOutAndCloseSpyOutput(spyOutput);
 	}
 	
-	@Ignore @Test public void wrongAnswer_First_Player_In_Penalty_Box() {
+	@Test public void first_Player_In_Penalty_Box() {
 		game.wrongAnswer();
 		
-		assertTrue(game.inPenaltyBox[0]);
+		assertTrue(players.inPenaltyBox[0]);
 	}
 	
-	@Ignore @Test public void wrongAnswer_Current_Player_Move_Next_Player() {
+	@Test public void current_Player_Move_Next_Player() {
 		game.wrongAnswer();
 		
-		assertEquals(1, game.currentPlayer);
+		assertEquals("Player2", players.getCurrentPlayer());
 	}
 
-	@Ignore @Test public void wrongAnswer_Twice_First_And_Second_Player_In_Penalty_Box() {
+	@Test public void twice_First_And_Second_Player_In_Penalty_Box() {
 		game.wrongAnswer();
 		game.wrongAnswer();
 		
-		assertTrue(game.inPenaltyBox[0]);
-		assertTrue(game.inPenaltyBox[1]);
+		assertTrue(players.inPenaltyBox[0]);
+		assertTrue(players.inPenaltyBox[1]);
 	}
 	
-	@Ignore @Test public void wrongAnswer_Three_Times_Current_Player_Back_To_First() {
+	@Test public void three_Times_Current_Player_Back_To_First() {
 		game.wrongAnswer();
 		game.wrongAnswer();
 		game.wrongAnswer();
 		
-		assertEquals(0, game.currentPlayer);
+		assertEquals("Player1", players.getCurrentPlayer());
 	}
 	
-	@Test public void wrongAnswer_Always_Return_True() {
+	@Test public void always_Return_True() {
 		assertTrue(game.wrongAnswer());
 	}
 	
