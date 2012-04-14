@@ -14,6 +14,7 @@ import org.junit.Test;
 public class TestGamePlayers {
 
 	GamePlayers gamePlayers = new GamePlayers();
+	private ByteArrayOutputStream spyOutput;
 
 	@Test public void player_Name_Added() {
 		gamePlayers.add("Player1");
@@ -84,8 +85,8 @@ public class TestGamePlayers {
 	
 	@Test public void current_Player_Purses_Increased_By_One() {
 		gamePlayers.add("Player1");
-		gamePlayers.currentPlayerPursesIncreasedByOne();
-		assertEquals(1, gamePlayers.getCurrentPlayerPurses());
+		gamePlayers.currentPlayerPurseIncreasedByOne();
+		assertEquals(1, gamePlayers.getCurrentPlayerPurse());
 	}
 	
 	@Test public void current_Player_Move_Next_Player() {
@@ -113,7 +114,7 @@ public class TestGamePlayers {
 		gamePlayers.add("Player1");
 		
 		for (int i = 0; i < 5; i++) {
-			gamePlayers.currentPlayerPursesIncreasedByOne();
+			gamePlayers.currentPlayerPurseIncreasedByOne();
 			assertTrue(gamePlayers.isCurrentPlayerNotWin());
 		}
 	}
@@ -122,10 +123,36 @@ public class TestGamePlayers {
 		gamePlayers.add("Player1");
 		
 		for (int i = 0; i < 6; i++) {
-			gamePlayers.currentPlayerPursesIncreasedByOne();
+			gamePlayers.currentPlayerPurseIncreasedByOne();
 		}
 		
 		assertFalse(gamePlayers.isCurrentPlayerNotWin());
+	}
+	
+	@Test public void roll_Is_Not_Multiple_Of_2_Output_Message() throws IOException {
+		gamePlayers.add("Player1");
+		spyOutput = AllTestsHelper.createSpySystemOut();
+
+		boolean actualReturn = gamePlayers.isGettingOutOfPenaltyBox(3);
+		
+		assertTrue(actualReturn);
+		assertTrue(gamePlayers.getIsGettingOutOfPenaltyBox());
+		assertEquals("Player1 is getting out of the penalty box" + AllTestsHelper.LINE_SEPARATOR, spyOutput.toString());
+	
+		AllTestsHelper.restoreSystemOutAndCloseSpyOutput(spyOutput);
+	}
+
+	@Test public void roll_Is_Multiple_Of_2_Output_Message() throws IOException {
+		gamePlayers.add("Player1");
+		spyOutput = AllTestsHelper.createSpySystemOut();
+
+		boolean actualReturn = gamePlayers.isGettingOutOfPenaltyBox(2);
+		
+		assertFalse(actualReturn);
+		assertFalse(gamePlayers.getIsGettingOutOfPenaltyBox());
+		assertEquals("Player1 is not getting out of the penalty box" + AllTestsHelper.LINE_SEPARATOR, spyOutput.toString());
+
+		AllTestsHelper.restoreSystemOutAndCloseSpyOutput(spyOutput);
 	}
 	
 }
