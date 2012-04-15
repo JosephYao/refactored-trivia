@@ -31,9 +31,10 @@ public class TestGamePlayers {
 	}
 	
 	@Test public void output_Message() throws IOException {
-		ByteArrayOutputStream spyOutput = AllTestsHelper.createSpySystemOut();
+		spyOutput = AllTestsHelper.createSpySystemOut();
 		
 		gamePlayers.add("Player1");
+		
 		assertEquals("Player1 was added" + AllTestsHelper.LINE_SEPARATOR + 
 				"They are player number 1" + AllTestsHelper.LINE_SEPARATOR, spyOutput.toString());
 		
@@ -42,28 +43,37 @@ public class TestGamePlayers {
 	
 	@Test public void current_Player_Go_Into_Penalty_Box() {
 		gamePlayers.add("Player1");
+		
 		gamePlayers.currentPlayerGoIntoPenaltyBox();
+		
 		assertTrue(gamePlayers.isCurrentPlayerInPenaltyBox());
 	}
 	
 	@Test public void get_Current_Player() {
 		gamePlayers.add("Player1");
+		
 		assertEquals("Player1", gamePlayers.getCurrentPlayer());
 	}
 	
 	@Test public void current_Player_Places_When_Roll_1() {
+		gamePlayers.add("Player1");
+		
 		gamePlayers.setCurrentPlayerPlace(1);
 		
 		assertEquals(1, gamePlayers.getCurrentPlayerPlace());
 	}
 
 	@Test public void current_Player_Places_When_Roll_11() {
+		gamePlayers.add("Player1");
+		
 		gamePlayers.setCurrentPlayerPlace(11);
 		
 		assertEquals(11, gamePlayers.getCurrentPlayerPlace());
 	}
 	
 	@Test public void current_Player_Places_When_Roll_5_Then_6() {
+		gamePlayers.add("Player1");
+		
 		gamePlayers.setCurrentPlayerPlace(5);
 		gamePlayers.setCurrentPlayerPlace(6);
 		
@@ -71,12 +81,16 @@ public class TestGamePlayers {
 	}
 	
 	@Test public void current_Player_Places_When_Roll_12() {
+		gamePlayers.add("Player1");
+		
 		gamePlayers.setCurrentPlayerPlace(12);
 		
 		assertEquals(0, gamePlayers.getCurrentPlayerPlace());
 	}
 	
 	@Test public void current_Player_Places_When_Roll_6_Then_6() {
+		gamePlayers.add("Player1");
+		
 		gamePlayers.setCurrentPlayerPlace(6);
 		gamePlayers.setCurrentPlayerPlace(6);
 		
@@ -85,7 +99,9 @@ public class TestGamePlayers {
 	
 	@Test public void current_Player_Purses_Increased_By_One() {
 		gamePlayers.add("Player1");
+		
 		gamePlayers.currentPlayerPurseIncreasedByOne();
+		
 		assertEquals(1, gamePlayers.getCurrentPlayerPurse());
 	}
 	
