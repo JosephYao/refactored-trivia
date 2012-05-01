@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="4.2.5" timestamp="2012-04-16T22:40:11.069">
+<file name="C:\Users\yaoj\Documents\Git\trivia\java\src\main\java\com\adaptionsoft\games\trivia\runner\GoldenMaster.java">
+<violation beginline="33" endline="34" begincolumn="17" endcolumn="52" rule="ForLoopsMustUseBraces" ruleset="Braces Rules" package="com.adaptionsoft.games.trivia.runner" class="GoldenMaster" method="main" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#ForLoopsMustUseBraces" priority="3">
+Avoid using for statements without curly braces
+</violation>
+</file>
+<file name="C:\Users\yaoj\Documents\Git\trivia\java\src\main\java\com\adaptionsoft\games\uglytrivia\Game.java">
+<violation beginline="29" endline="29" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Java Logging Rules" package="com.adaptionsoft.games.uglytrivia" class="Game" method="rollOutputMessage" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+<violation beginline="30" endline="30" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Java Logging Rules" package="com.adaptionsoft.games.uglytrivia" class="Game" method="rollOutputMessage" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+<violation beginline="42" endline="42" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Java Logging Rules" package="com.adaptionsoft.games.uglytrivia" class="Game" method="rollWhenNotInPenaltyBoxOutputMessage" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+<violation beginline="45" endline="45" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Java Logging Rules" package="com.adaptionsoft.games.uglytrivia" class="Game" method="rollWhenNotInPenaltyBoxOutputMessage" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+<violation beginline="65" endline="65" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Java Logging Rules" package="com.adaptionsoft.games.uglytrivia" class="Game" method="wasCorrectlyAnsweredWhenCurrentPlayerNotInPenaltyBoxOutputMessage" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+<violation beginline="66" endline="66" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Java Logging Rules" package="com.adaptionsoft.games.uglytrivia" class="Game" method="wasCorrectlyAnsweredWhenCurrentPlayerNotInPenaltyBoxOutputMessage" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+<violation beginline="83" endline="83" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Java Logging Rules" package="com.adaptionsoft.games.uglytrivia" class="Game" method="wrongAnswerOutputMessage" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+<violation beginline="84" endline="84" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Java Logging Rules" package="com.adaptionsoft.games.uglytrivia" class="Game" method="wrongAnswerOutputMessage" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+</file>
+</pmd>

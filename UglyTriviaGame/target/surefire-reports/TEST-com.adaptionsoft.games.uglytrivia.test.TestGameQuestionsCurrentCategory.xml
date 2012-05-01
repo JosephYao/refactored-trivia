@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite failures="0" time="0.047" errors="0" skipped="0" tests="12" name="com.adaptionsoft.games.uglytrivia.test.TestGameQuestionsCurrentCategory">
+  <properties>
+    <property name="http.agent" value="Sonar"/>
+    <property name="ROOT_LOGGER_LEVEL" value="INFO"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\glassfish3\jdk\jre\bin"/>
+    <property name="java.vm.version" value="20.0-b11"/>
+    <property name="java.vm.vendor" value="Sun Microsystems Inc."/>
+    <property name="java.vendor.url" value="http://java.sun.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\yaoj\Documents\Git\trivia\java"/>
+    <property name="java.runtime.version" value="1.6.0_25-b06"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\glassfish3\jdk\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\yaoj\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc."/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="net.sourceforge.cobertura.datafile" value="C:\Users\yaoj\Documents\Git\trivia\java\target\cobertura\cobertura.ser"/>
+    <property name="-Dmaven.test.failure.ignore" value="true"/>
+    <property name="classworlds.conf" value="C:\Users\yaoj\Documents\Workspace\.metadata\.plugins\org.maven.ide.eclipse\launches\m2conf6408057513931670239.tmp"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.library.path" value="C:\glassfish3\jdk\bin;.;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\ClarifyCRM12.5SR1.27\Configurator\Common Files\CCAutomation;C:\ClarifyCRM12.5SR1.27\ClarifyClient;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\ClfyFTS;C:\Program Files (x86)\RSA SecurID Token Common;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files (x86)\Common Files\Ulead Systems\MPEG;C:\Program Files\SlikSvn\bin\;C:\Program Files\Apache Software Foundation\apache-maven-3.0.3\bin;C:\Tools\Work\Java\jboss-6.0.0.Final\bin;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files (x86)\Common Files\Roxio Shared\9.0\DLLShared\;C:\Program Files (x86)\Calibre2\"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="50.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="6.1"/>
+    <property name="user.home" value="C:\Users\yaoj"/>
+    <property name="user.timezone" value="GMT+08:00"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.6"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="yaoj"/>
+    <property name="java.class.path" value="/C:/Eclipse/eclipse J2EE/plugins/org.maven.ide.eclipse.maven_embedder_0.12.1.20110112-1712/jars/plexus-classworlds-2.4.jar"/>
+    <property name="java.vm.specification.version" value="1.0"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\glassfish3\jdk\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -D-Dmaven.test.failure.ignore=true -B -s C:\Users\yaoj\.m2\settings.xml clean install sonar:sonar"/>
+    <property name="java.specification.vendor" value="Sun Microsystems Inc."/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.6.0_25"/>
+    <property name="java.ext.dirs" value="C:\glassfish3\jdk\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\glassfish3\jdk\jre\lib\resources.jar;C:\glassfish3\jdk\jre\lib\rt.jar;C:\glassfish3\jdk\jre\lib\sunrsasign.jar;C:\glassfish3\jdk\jre\lib\jsse.jar;C:\glassfish3\jdk\jre\lib\jce.jar;C:\glassfish3\jdk\jre\lib\charsets.jar;C:\glassfish3\jdk\jre\lib\modules\jdk.boot.jar;C:\glassfish3\jdk\jre\classes"/>
+    <property name="java.vendor" value="Sun Microsystems Inc."/>
+    <property name="maven.home" value="C:\Users\yaoj\Documents\Git\trivia\java\EMBEDDED"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://java.sun.com/cgi-bin/bugreport.cgi"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="project.build.outputDirectory" value="C:\Users\yaoj\Documents\Git\trivia\java\target\generated-classes\cobertura"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase time="0.016" classname="com.adaptionsoft.games.uglytrivia.test.TestGameQuestionsCurrentCategory" name="pop_Category[0]"/>
+  <testcase time="0" classname="com.adaptionsoft.games.uglytrivia.test.TestGameQuestionsCurrentCategory" name="pop_Category[1]"/>
+  <testcase time="0" classname="com.adaptionsoft.games.uglytrivia.test.TestGameQuestionsCurrentCategory" name="pop_Category[2]"/>
+  <testcase time="0" classname="com.adaptionsoft.games.uglytrivia.test.TestGameQuestionsCurrentCategory" name="pop_Category[3]"/>
+  <testcase time="0" classname="com.adaptionsoft.games.uglytrivia.test.TestGameQuestionsCurrentCategory" name="pop_Category[4]"/>
+  <testcase time="0" classname="com.adaptionsoft.games.uglytrivia.test.TestGameQuestionsCurrentCategory" name="pop_Category[5]"/>
+  <testcase time="0.015" classname="com.adaptionsoft.games.uglytrivia.test.TestGameQuestionsCurrentCategory" name="pop_Category[6]"/>
+  <testcase time="0" classname="com.adaptionsoft.games.uglytrivia.test.TestGameQuestionsCurrentCategory" name="pop_Category[7]"/>
+  <testcase time="0" classname="com.adaptionsoft.games.uglytrivia.test.TestGameQuestionsCurrentCategory" name="pop_Category[8]"/>
+  <testcase time="0.016" classname="com.adaptionsoft.games.uglytrivia.test.TestGameQuestionsCurrentCategory" name="pop_Category[9]"/>
+  <testcase time="0" classname="com.adaptionsoft.games.uglytrivia.test.TestGameQuestionsCurrentCategory" name="pop_Category[10]"/>
+  <testcase time="0" classname="com.adaptionsoft.games.uglytrivia.test.TestGameQuestionsCurrentCategory" name="pop_Category[11]"/>
+</testsuite>

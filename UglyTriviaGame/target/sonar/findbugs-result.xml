@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="http://findbugs.sourceforge.net/xsl/default.xsl"?>
+
+<BugCollection version="1.3.9" sequence="0" timestamp="1334587185858" analysisTimestamp="1334587201535" release="">
+  <Project>
+    <Jar>C:\Users\yaoj\Documents\Git\trivia\java\target\classes</Jar>
+    <AuxClasspathEntry>C:\Users\yaoj\.m2\repository\org\apache\commons\commons-io\1.3.2\commons-io-1.3.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\yaoj\.m2\repository\junit\junit\4.10\junit-4.10.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\yaoj\.m2\repository\org\hamcrest\hamcrest-core\1.1\hamcrest-core-1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\yaoj\AppData\Local\Temp\findbugs1835019525998472829.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\yaoj\AppData\Local\Temp\findbugs1255906125530249515.jar</AuxClasspathEntry>
+    <SrcDir>C:\Users\yaoj\Documents\Git\trivia\java\src\main\java</SrcDir>
+    <WrkDir>C:\Users\yaoj\Documents\Git\trivia\java\target</WrkDir>
+  </Project>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE" instanceHash="eee94d3942c09537e24171be81c88a7c" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method ignores exceptional return value</ShortMessage>
+    <LongMessage>com.adaptionsoft.games.trivia.runner.GoldenMaster.generateLog(int) ignores exceptional return value of java.io.File.createNewFile()</LongMessage>
+    <Class classname="com.adaptionsoft.games.trivia.runner.GoldenMaster" primary="true">
+      <SourceLine classname="com.adaptionsoft.games.trivia.runner.GoldenMaster" start="12" end="35" sourcefile="GoldenMaster.java" sourcepath="com/adaptionsoft/games/trivia/runner/GoldenMaster.java" relSourcepath="com\adaptionsoft\games\trivia\runner\GoldenMaster.java">
+        <Message>At GoldenMaster.java:[lines 12-35]</Message>
+      </SourceLine>
+      <Message>In class com.adaptionsoft.games.trivia.runner.GoldenMaster</Message>
+    </Class>
+    <Method classname="com.adaptionsoft.games.trivia.runner.GoldenMaster" name="generateLog" signature="(I)V" isStatic="false" primary="true">
+      <SourceLine classname="com.adaptionsoft.games.trivia.runner.GoldenMaster" start="18" end="29" startBytecode="0" endBytecode="199" sourcefile="GoldenMaster.java" sourcepath="com/adaptionsoft/games/trivia/runner/GoldenMaster.java" relSourcepath="com\adaptionsoft\games\trivia\runner\GoldenMaster.java"/>
+      <Message>In method com.adaptionsoft.games.trivia.runner.GoldenMaster.generateLog(int)</Message>
+    </Method>
+    <Method classname="java.io.File" name="createNewFile" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="881" end="883" startBytecode="0" endBytecode="58" sourcefile="File.java" sourcepath="java/io/File.java"/>
+      <Message>Called method java.io.File.createNewFile()</Message>
+    </Method>
+    <SourceLine classname="com.adaptionsoft.games.trivia.runner.GoldenMaster" primary="true" start="19" end="19" startBytecode="35" endBytecode="35" sourcefile="GoldenMaster.java" sourcepath="com/adaptionsoft/games/trivia/runner/GoldenMaster.java" relSourcepath="com\adaptionsoft\games\trivia\runner\GoldenMaster.java">
+      <Message>At GoldenMaster.java:[line 19]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DMI_HARDCODED_ABSOLUTE_FILENAME" priority="2" abbrev="DMI" category="STYLE" instanceHash="e3cba458ea3eb8f56740230830362d8d" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Code contains a hard coded reference to an absolute pathname</ShortMessage>
+    <LongMessage>Hard coded reference to an absolute pathname in com.adaptionsoft.games.trivia.runner.Result.main(String[])</LongMessage>
+    <Class classname="com.adaptionsoft.games.trivia.runner.Result" primary="true">
+      <SourceLine classname="com.adaptionsoft.games.trivia.runner.Result" start="8" end="44" sourcefile="Result.java" sourcepath="com/adaptionsoft/games/trivia/runner/Result.java" relSourcepath="com\adaptionsoft\games\trivia\runner\Result.java">
+        <Message>At Result.java:[lines 8-44]</Message>
+      </SourceLine>
+      <Message>In class com.adaptionsoft.games.trivia.runner.Result</Message>
+    </Class>
+    <Method classname="com.adaptionsoft.games.trivia.runner.Result" name="main" signature="([Ljava/lang/String;)V" isStatic="true" primary="true">
+      <SourceLine classname="com.adaptionsoft.games.trivia.runner.Result" start="11" end="31" startBytecode="0" endBytecode="77" sourcefile="Result.java" sourcepath="com/adaptionsoft/games/trivia/runner/Result.java" relSourcepath="com\adaptionsoft\games\trivia\runner\Result.java"/>
+      <Message>In method com.adaptionsoft.games.trivia.runner.Result.main(String[])</Message>
+    </Method>
+    <String value="C:\Users\yaoj\Documents\Git\trivia\java\Result\" role="FILE_NAME">
+      <Message>File name C:\Users\yaoj\Documents\Git\trivia\java\Result\</Message>
+    </String>
+    <SourceLine classname="com.adaptionsoft.games.trivia.runner.Result" primary="true" start="11" end="11" startBytecode="6" endBytecode="6" sourcefile="Result.java" sourcepath="com/adaptionsoft/games/trivia/runner/Result.java" relSourcepath="com\adaptionsoft\games\trivia\runner\Result.java">
+      <Message>At Result.java:[line 11]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE" instanceHash="50f29b4889245e4a61954c583f388471" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method ignores exceptional return value</ShortMessage>
+    <LongMessage>com.adaptionsoft.games.trivia.runner.Result.main(String[]) ignores exceptional return value of java.io.File.delete()</LongMessage>
+    <Class classname="com.adaptionsoft.games.trivia.runner.Result" primary="true">
+      <SourceLine classname="com.adaptionsoft.games.trivia.runner.Result" start="8" end="44" sourcefile="Result.java" sourcepath="com/adaptionsoft/games/trivia/runner/Result.java" relSourcepath="com\adaptionsoft\games\trivia\runner\Result.java">
+        <Message>At Result.java:[lines 8-44]</Message>
+      </SourceLine>
+      <Message>In class com.adaptionsoft.games.trivia.runner.Result</Message>
+    </Class>
+    <Method classname="com.adaptionsoft.games.trivia.runner.Result" name="main" signature="([Ljava/lang/String;)V" isStatic="true" primary="true">
+      <SourceLine classname="com.adaptionsoft.games.trivia.runner.Result" start="11" end="31" startBytecode="0" endBytecode="372" sourcefile="Result.java" sourcepath="com/adaptionsoft/games/trivia/runner/Result.java" relSourcepath="com\adaptionsoft\games\trivia\runner\Result.java"/>
+      <Message>In method com.adaptionsoft.games.trivia.runner.Result.main(String[])</Message>
+    </Method>
+    <Method classname="java.io.File" name="delete" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="900" end="904" startBytecode="0" endBytecode="59" sourcefile="File.java" sourcepath="java/io/File.java"/>
+      <Message>Called method java.io.File.delete()</Message>
+    </Method>
+    <SourceLine classname="com.adaptionsoft.games.trivia.runner.Result" primary="true" start="13" end="13" startBytecode="35" endBytecode="35" sourcefile="Result.java" sourcepath="com/adaptionsoft/games/trivia/runner/Result.java" relSourcepath="com\adaptionsoft\games\trivia\runner\Result.java">
+      <Message>At Result.java:[line 13]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ES_COMPARING_STRINGS_WITH_EQ" priority="3" abbrev="ES" category="BAD_PRACTICE" instanceHash="a1d20c84963810d50e678a788ba5928c" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Comparison of String objects using == or !=</ShortMessage>
+    <LongMessage>Comparison of String objects using == or != in com.adaptionsoft.games.uglytrivia.GameQuestions.askQuestion(int) </LongMessage>
+    <Class classname="com.adaptionsoft.games.uglytrivia.GameQuestions" primary="true">
+      <SourceLine classname="com.adaptionsoft.games.uglytrivia.GameQuestions" start="7" end="56" sourcefile="GameQuestions.java" sourcepath="com/adaptionsoft/games/uglytrivia/GameQuestions.java" relSourcepath="com\adaptionsoft\games\uglytrivia\GameQuestions.java">
+        <Message>At GameQuestions.java:[lines 7-56]</Message>
+      </SourceLine>
+      <Message>In class com.adaptionsoft.games.uglytrivia.GameQuestions</Message>
+    </Class>
+    <Method classname="com.adaptionsoft.games.uglytrivia.GameQuestions" name="askQuestion" signature="(I)V" isStatic="false" primary="true">
+      <SourceLine classname="com.adaptionsoft.games.uglytrivia.GameQuestions" start="26" end="34" startBytecode="0" endBytecode="44" sourcefile="GameQuestions.java" sourcepath="com/adaptionsoft/games/uglytrivia/GameQuestions.java" relSourcepath="com\adaptionsoft\games\uglytrivia\GameQuestions.java"/>
+      <Message>In method com.adaptionsoft.games.uglytrivia.GameQuestions.askQuestion(int)</Message>
+    </Method>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.String" start="92" end="2973" sourcefile="String.java" sourcepath="java/lang/String.java">
+        <Message>At String.java:[lines 92-2973]</Message>
+      </SourceLine>
+      <Message>Actual type String</Message>
+    </Type>
+    <SourceLine classname="com.adaptionsoft.games.uglytrivia.GameQuestions" primary="true" start="26" end="26" startBytecode="7" endBytecode="7" sourcefile="GameQuestions.java" sourcepath="com/adaptionsoft/games/uglytrivia/GameQuestions.java" relSourcepath="com\adaptionsoft\games\uglytrivia\GameQuestions.java">
+      <Message>At GameQuestions.java:[line 26]</Message>
+    </SourceLine>
+    <SourceLine classname="com.adaptionsoft.games.uglytrivia.GameQuestions" start="28" end="28" startBytecode="33" endBytecode="33" sourcefile="GameQuestions.java" sourcepath="com/adaptionsoft/games/uglytrivia/GameQuestions.java" relSourcepath="com\adaptionsoft\games\uglytrivia\GameQuestions.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at GameQuestions.java:[line 28]</Message>
+    </SourceLine>
+    <SourceLine classname="com.adaptionsoft.games.uglytrivia.GameQuestions" start="30" end="30" startBytecode="59" endBytecode="59" sourcefile="GameQuestions.java" sourcepath="com/adaptionsoft/games/uglytrivia/GameQuestions.java" relSourcepath="com\adaptionsoft\games\uglytrivia\GameQuestions.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at GameQuestions.java:[line 30]</Message>
+    </SourceLine>
+    <SourceLine classname="com.adaptionsoft.games.uglytrivia.GameQuestions" start="32" end="32" startBytecode="85" endBytecode="85" sourcefile="GameQuestions.java" sourcepath="com/adaptionsoft/games/uglytrivia/GameQuestions.java" relSourcepath="com\adaptionsoft\games\uglytrivia\GameQuestions.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at GameQuestions.java:[line 32]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.RefComparisonWarningProperty.STATIC_AND_UNKNOWN" value="true"/>
+  </BugInstance>
+  <BugCategory category="STYLE">
+    <Description>Dodgy</Description>
+  </BugCategory>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugPattern type="ES_COMPARING_STRINGS_WITH_EQ" abbrev="ES" category="BAD_PRACTICE">
+    <ShortDescription>Comparison of String objects using == or !=</ShortDescription>
+    <Details><![CDATA[
+
+  <p>This code compares <code>java.lang.String</code> objects for reference
+equality using the == or != operators.
+Unless both strings are either constants in a source file, or have been
+interned using the <code>String.intern()</code> method, the same string
+value may be represented by two different String objects. Consider
+using the <code>equals(Object)</code> method instead.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" abbrev="RV" category="BAD_PRACTICE" cweid="253">
+    <ShortDescription>Method ignores exceptional return value</ShortDescription>
+    <Details><![CDATA[
+
+   <p> This method returns a value that is not checked. The return value should be checked
+since it can indicate an unusual or unexpected function execution. For
+example, the <code>File.delete()</code> method returns false
+if the file could not be successfully deleted (rather than 
+throwing an Exception).
+If you don't check the result, you won't notice if the method invocation
+signals unexpected behavior by returning an atypical return value.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DMI_HARDCODED_ABSOLUTE_FILENAME" abbrev="DMI" category="STYLE">
+    <ShortDescription>Code contains a hard coded reference to an absolute pathname</ShortDescription>
+    <Details><![CDATA[
+
+<p>This code constructs a File object using a hard coded to an absolute pathname
+(e.g., <code>new File("/home/dannyc/workspace/j2ee/src/share/com/sun/enterprise/deployment");</code>
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="RV" cweid="440">
+    <Description>Bad use of return value from method</Description>
+  </BugCode>
+  <BugCode abbrev="ES" cweid="597">
+    <Description>Checking String equality using == or !=</Description>
+  </BugCode>
+  <BugCode abbrev="DMI" cweid="440">
+    <Description>Dubious method invocation</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Mon, 16 Apr 2012 22:39:45 +0800" total_classes="6" referenced_classes="26" total_bugs="4" total_size="236" num_packages="2" vm_version="20.0-b11" cpu_seconds="16.44" clock_seconds="5.62" peak_mbytes="284.69" alloc_mbytes="864.00" gc_seconds="0.00" priority_3="1" priority_2="3">
+    <FileStats path="com/adaptionsoft/games/trivia/runner/GameRunner.java" bugCount="0" size="21"/>
+    <FileStats path="com/adaptionsoft/games/trivia/runner/GoldenMaster.java" bugCount="1" size="23" bugHash="0f788bbb0a8c946fde7bb188bd7f5425"/>
+    <FileStats path="com/adaptionsoft/games/trivia/runner/Result.java" bugCount="2" size="29" bugHash="3d0b65b5ed62c2887b666b8538812984"/>
+    <FileStats path="com/adaptionsoft/games/uglytrivia/Game.java" bugCount="0" size="53"/>
+    <FileStats path="com/adaptionsoft/games/uglytrivia/GamePlayers.java" bugCount="0" size="67"/>
+    <FileStats path="com/adaptionsoft/games/uglytrivia/GameQuestions.java" bugCount="1" size="43" bugHash="440c9e0b1207463b78340dc419dfa7a1"/>
+    <PackageStats package="com.adaptionsoft.games.trivia.runner" total_bugs="3" total_types="3" total_size="73" priority_2="3">
+      <ClassStats class="com.adaptionsoft.games.trivia.runner.GameRunner" sourceFile="GameRunner.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.adaptionsoft.games.trivia.runner.GoldenMaster" sourceFile="GoldenMaster.java" interface="false" size="23" bugs="1" priority_2="1"/>
+      <ClassStats class="com.adaptionsoft.games.trivia.runner.Result" sourceFile="Result.java" interface="false" size="29" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="com.adaptionsoft.games.uglytrivia" total_bugs="1" total_types="3" total_size="163" priority_3="1">
+      <ClassStats class="com.adaptionsoft.games.uglytrivia.Game" sourceFile="Game.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.adaptionsoft.games.uglytrivia.GamePlayers" sourceFile="GamePlayers.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="com.adaptionsoft.games.uglytrivia.GameQuestions" sourceFile="GameQuestions.java" interface="false" size="43" bugs="1" priority_3="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="com.mebigfatguy.fbcontrib.detect.JDBCVendorReliance" totalMilliseconds="11" invocations="6" avgMicrosecondsPerInvocation="1839" maxMicrosecondsPerInvocation="3405" standardDeviationMircosecondsPerInvocation="1195"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteAnnotationRetention" totalMilliseconds="11" invocations="26" avgMicrosecondsPerInvocation="425" maxMicrosecondsPerInvocation="2329" standardDeviationMircosecondsPerInvocation="515"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteJCIPAnnotation" totalMilliseconds="11" invocations="26" avgMicrosecondsPerInvocation="437" maxMicrosecondsPerInvocation="1990" standardDeviationMircosecondsPerInvocation="490"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.Methods" totalMilliseconds="11" invocations="26" avgMicrosecondsPerInvocation="440" maxMicrosecondsPerInvocation="2226" standardDeviationMircosecondsPerInvocation="518"/>
+      <ClassProfile name="com.mebigfatguy.fbcontrib.detect.InefficientStringBuffering" totalMilliseconds="11" invocations="6" avgMicrosecondsPerInvocation="1922" maxMicrosecondsPerInvocation="5979" standardDeviationMircosecondsPerInvocation="1889"/>
+      <ClassProfile name="com.mebigfatguy.fbcontrib.detect.PossiblyRedundantMethodCalls" totalMilliseconds="11" invocations="6" avgMicrosecondsPerInvocation="1941" maxMicrosecondsPerInvocation="3698" standardDeviationMircosecondsPerInvocation="1206"/>
+      <ClassProfile name="com.mebigfatguy.fbcontrib.detect.FinalParameters" totalMilliseconds="11" invocations="6" avgMicrosecondsPerInvocation="1943" maxMicrosecondsPerInvocation="7248" standardDeviationMircosecondsPerInvocation="2381"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="11" invocations="6" avgMicrosecondsPerInvocation="1949" maxMicrosecondsPerInvocation="6410" standardDeviationMircosecondsPerInvocation="2136"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteCheckReturnValueAnnotations" totalMilliseconds="11" invocations="26" avgMicrosecondsPerInvocation="453" maxMicrosecondsPerInvocation="2409" standardDeviationMircosecondsPerInvocation="560"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.URLProblems" totalMilliseconds="11" invocations="6" avgMicrosecondsPerInvocation="1969" maxMicrosecondsPerInvocation="3050" standardDeviationMircosecondsPerInvocation="809"/>
+      <ClassProfile name="com.mebigfatguy.fbcontrib.detect.OrphanedDOMNode" totalMilliseconds="11" invocations="6" avgMicrosecondsPerInvocation="1987" maxMicrosecondsPerInvocation="4374" standardDeviationMircosecondsPerInvocation="1498"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteCheckReturnValue" totalMilliseconds="12" invocations="26" avgMicrosecondsPerInvocation="465" maxMicrosecondsPerInvocation="2760" standardDeviationMircosecondsPerInvocation="593"/>
+      <ClassProfile name="com.mebigfatguy.fbcontrib.detect.LocalSynchronizedCollection" totalMilliseconds="12" invocations="6" avgMicrosecondsPerInvocation="2020" maxMicrosecondsPerInvocation="4344" standardDeviationMircosecondsPerInvocation="1305"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.asm.ClassReaderAnalysisEngine" totalMilliseconds="12" invocations="331" avgMicrosecondsPerInvocation="36" maxMicrosecondsPerInvocation="6358" standardDeviationMircosecondsPerInvocation="348"/>
+      <ClassProfile name="com.mebigfatguy.fbcontrib.detect.InconsistentKeyNameCasing" totalMilliseconds="13" invocations="6" avgMicrosecondsPerInvocation="2173" maxMicrosecondsPerInvocation="5973" standardDeviationMircosecondsPerInvocation="1824"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="13" invocations="6" avgMicrosecondsPerInvocation="2207" maxMicrosecondsPerInvocation="5285" standardDeviationMircosecondsPerInvocation="1616"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="13" invocations="6" avgMicrosecondsPerInvocation="2319" maxMicrosecondsPerInvocation="6080" standardDeviationMircosecondsPerInvocation="1748"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteSuppressedWarnings" totalMilliseconds="14" invocations="26" avgMicrosecondsPerInvocation="551" maxMicrosecondsPerInvocation="3098" standardDeviationMircosecondsPerInvocation="657"/>
+      <ClassProfile name="com.mebigfatguy.fbcontrib.detect.FieldCouldBeLocal" totalMilliseconds="15" invocations="6" avgMicrosecondsPerInvocation="2510" maxMicrosecondsPerInvocation="6806" standardDeviationMircosecondsPerInvocation="2360"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="16" invocations="6" avgMicrosecondsPerInvocation="2767" maxMicrosecondsPerInvocation="4420" standardDeviationMircosecondsPerInvocation="1232"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="16" invocations="49" avgMicrosecondsPerInvocation="341" maxMicrosecondsPerInvocation="1250" standardDeviationMircosecondsPerInvocation="325"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteNonNullAnnotations" totalMilliseconds="18" invocations="26" avgMicrosecondsPerInvocation="692" maxMicrosecondsPerInvocation="7488" standardDeviationMircosecondsPerInvocation="1426"/>
+      <ClassProfile name="com.mebigfatguy.fbcontrib.detect.MoreDumbMethods" totalMilliseconds="19" invocations="6" avgMicrosecondsPerInvocation="3253" maxMicrosecondsPerInvocation="5726" standardDeviationMircosecondsPerInvocation="1366"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="21" invocations="6" avgMicrosecondsPerInvocation="3642" maxMicrosecondsPerInvocation="12627" standardDeviationMircosecondsPerInvocation="4119"/>
+      <ClassProfile name="edu.umd.cs.findbugs.DetectorToDetector2Adapter" totalMilliseconds="21" invocations="1232" avgMicrosecondsPerInvocation="17" maxMicrosecondsPerInvocation="221" standardDeviationMircosecondsPerInvocation="12"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="27" invocations="6" avgMicrosecondsPerInvocation="4574" maxMicrosecondsPerInvocation="14276" standardDeviationMircosecondsPerInvocation="4505"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="38" invocations="6" avgMicrosecondsPerInvocation="6372" maxMicrosecondsPerInvocation="13720" standardDeviationMircosecondsPerInvocation="4486"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.impl.ZipCodeBaseFactory" totalMilliseconds="38" invocations="16" avgMicrosecondsPerInvocation="2398" maxMicrosecondsPerInvocation="34629" standardDeviationMircosecondsPerInvocation="8322"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="46" invocations="26" avgMicrosecondsPerInvocation="1777" maxMicrosecondsPerInvocation="8690" standardDeviationMircosecondsPerInvocation="2254"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="46" invocations="49" avgMicrosecondsPerInvocation="958" maxMicrosecondsPerInvocation="4516" standardDeviationMircosecondsPerInvocation="1055"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.StreamResourceTracker" totalMilliseconds="55" invocations="19" avgMicrosecondsPerInvocation="2946" maxMicrosecondsPerInvocation="4968" standardDeviationMircosecondsPerInvocation="1104"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="56" invocations="26" avgMicrosecondsPerInvocation="2161" maxMicrosecondsPerInvocation="10373" standardDeviationMircosecondsPerInvocation="2621"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="66" invocations="49" avgMicrosecondsPerInvocation="1351" maxMicrosecondsPerInvocation="41927" standardDeviationMircosecondsPerInvocation="5876"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="67" invocations="26" avgMicrosecondsPerInvocation="2597" maxMicrosecondsPerInvocation="16502" standardDeviationMircosecondsPerInvocation="3617"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="71" invocations="371" avgMicrosecondsPerInvocation="192" maxMicrosecondsPerInvocation="1307" standardDeviationMircosecondsPerInvocation="121"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="74" invocations="59" avgMicrosecondsPerInvocation="1268" maxMicrosecondsPerInvocation="17512" standardDeviationMircosecondsPerInvocation="2713"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="76" invocations="49" avgMicrosecondsPerInvocation="1557" maxMicrosecondsPerInvocation="16769" standardDeviationMircosecondsPerInvocation="2435"/>
+      <ClassProfile name="com.mebigfatguy.fbcontrib.collect.CollectStatistics" totalMilliseconds="77" invocations="26" avgMicrosecondsPerInvocation="2979" maxMicrosecondsPerInvocation="22060" standardDeviationMircosecondsPerInvocation="4515"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="83" invocations="49" avgMicrosecondsPerInvocation="1713" maxMicrosecondsPerInvocation="5648" standardDeviationMircosecondsPerInvocation="1551"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="90" invocations="26" avgMicrosecondsPerInvocation="3471" maxMicrosecondsPerInvocation="18907" standardDeviationMircosecondsPerInvocation="4464"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="96" invocations="26" avgMicrosecondsPerInvocation="3704" maxMicrosecondsPerInvocation="21696" standardDeviationMircosecondsPerInvocation="4805"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="99" invocations="30" avgMicrosecondsPerInvocation="3321" maxMicrosecondsPerInvocation="8459" standardDeviationMircosecondsPerInvocation="2350"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="150" invocations="26" avgMicrosecondsPerInvocation="5807" maxMicrosecondsPerInvocation="38645" standardDeviationMircosecondsPerInvocation="8059"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="153" invocations="49" avgMicrosecondsPerInvocation="3136" maxMicrosecondsPerInvocation="10800" standardDeviationMircosecondsPerInvocation="2927"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="165" invocations="49" avgMicrosecondsPerInvocation="3378" maxMicrosecondsPerInvocation="28878" standardDeviationMircosecondsPerInvocation="4451"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="189" invocations="49" avgMicrosecondsPerInvocation="3870" maxMicrosecondsPerInvocation="14224" standardDeviationMircosecondsPerInvocation="3936"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="200" invocations="49" avgMicrosecondsPerInvocation="4084" maxMicrosecondsPerInvocation="14933" standardDeviationMircosecondsPerInvocation="4081"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="263" invocations="364" avgMicrosecondsPerInvocation="723" maxMicrosecondsPerInvocation="18188" standardDeviationMircosecondsPerInvocation="1726"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="313" invocations="951" avgMicrosecondsPerInvocation="329" maxMicrosecondsPerInvocation="2831" standardDeviationMircosecondsPerInvocation="386"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="314" invocations="78" avgMicrosecondsPerInvocation="4034" maxMicrosecondsPerInvocation="16906" standardDeviationMircosecondsPerInvocation="4048"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="345" invocations="26" avgMicrosecondsPerInvocation="13280" maxMicrosecondsPerInvocation="69335" standardDeviationMircosecondsPerInvocation="17122"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

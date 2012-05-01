@@ -1,0 +1,737 @@
+<?xml version="1.0"?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+
+<coverage line-rate="0.6545454545454545" branch-rate="0.5476190476190477" lines-covered="108" lines-valid="165" branches-covered="23" branches-valid="42" complexity="1.4222222222222223" version="1.9.4.1" timestamp="1334587197536">
+	<sources>
+		<source>--source</source>
+		<source>C:/Users/yaoj/Documents/Git/trivia/java/src/main/java</source>
+	</sources>
+	<packages>
+		<package name="com.adaptionsoft.games.trivia.runner" line-rate="0.0" branch-rate="0.0" complexity="2.125">
+			<classes>
+				<class name="com.adaptionsoft.games.trivia.runner.GameRunner" filename="com/adaptionsoft/games/trivia/runner/GameRunner.java" line-rate="0.0" branch-rate="0.0" complexity="2.5">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="8" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="main" signature="([Ljava/lang/String;)V" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="13" hits="0" branch="false"/>
+								<line number="14" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="run" signature="([Ljava/lang/String;)V" line-rate="0.0" branch-rate="0.0">
+							<lines>
+								<line number="17" hits="0" branch="false"/>
+								<line number="19" hits="0" branch="false"/>
+								<line number="20" hits="0" branch="false"/>
+								<line number="21" hits="0" branch="false"/>
+								<line number="24" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="25" hits="0" branch="false"/>
+								<line number="27" hits="0" branch="false"/>
+								<line number="32" hits="0" branch="false"/>
+								<line number="34" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="35" hits="0" branch="false"/>
+								<line number="37" hits="0" branch="false"/>
+								<line number="42" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="43" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="8" hits="0" branch="false"/>
+						<line number="13" hits="0" branch="false"/>
+						<line number="14" hits="0" branch="false"/>
+						<line number="17" hits="0" branch="false"/>
+						<line number="19" hits="0" branch="false"/>
+						<line number="20" hits="0" branch="false"/>
+						<line number="21" hits="0" branch="false"/>
+						<line number="24" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="25" hits="0" branch="false"/>
+						<line number="27" hits="0" branch="false"/>
+						<line number="32" hits="0" branch="false"/>
+						<line number="34" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="35" hits="0" branch="false"/>
+						<line number="37" hits="0" branch="false"/>
+						<line number="42" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="43" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="com.adaptionsoft.games.trivia.runner.GoldenMaster" filename="com/adaptionsoft/games/trivia/runner/GoldenMaster.java" line-rate="0.0" branch-rate="0.0" complexity="1.3333333333333333">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Lcom/adaptionsoft/games/trivia/runner/GameRunner;Ljava/lang/String;)V" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="12" hits="0" branch="false"/>
+								<line number="13" hits="0" branch="false"/>
+								<line number="14" hits="0" branch="false"/>
+								<line number="15" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="generateLog" signature="(I)V" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="18" hits="0" branch="false"/>
+								<line number="19" hits="0" branch="false"/>
+								<line number="21" hits="0" branch="false"/>
+								<line number="22" hits="0" branch="false"/>
+								<line number="23" hits="0" branch="false"/>
+								<line number="25" hits="0" branch="false"/>
+								<line number="27" hits="0" branch="false"/>
+								<line number="28" hits="0" branch="false"/>
+								<line number="29" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="main" signature="([Ljava/lang/String;)V" line-rate="0.0" branch-rate="0.0">
+							<lines>
+								<line number="32" hits="0" branch="false"/>
+								<line number="33" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="34" hits="0" branch="false"/>
+								<line number="35" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="12" hits="0" branch="false"/>
+						<line number="13" hits="0" branch="false"/>
+						<line number="14" hits="0" branch="false"/>
+						<line number="15" hits="0" branch="false"/>
+						<line number="18" hits="0" branch="false"/>
+						<line number="19" hits="0" branch="false"/>
+						<line number="21" hits="0" branch="false"/>
+						<line number="22" hits="0" branch="false"/>
+						<line number="23" hits="0" branch="false"/>
+						<line number="25" hits="0" branch="false"/>
+						<line number="27" hits="0" branch="false"/>
+						<line number="28" hits="0" branch="false"/>
+						<line number="29" hits="0" branch="false"/>
+						<line number="32" hits="0" branch="false"/>
+						<line number="33" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="34" hits="0" branch="false"/>
+						<line number="35" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="com.adaptionsoft.games.trivia.runner.Result" filename="com/adaptionsoft/games/trivia/runner/Result.java" line-rate="0.0" branch-rate="0.0" complexity="2.6666666666666665">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="8" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="compare" signature="(I)Z" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="38" hits="0" branch="false"/>
+								<line number="40" hits="0" branch="false"/>
+								<line number="41" hits="0" branch="false"/>
+								<line number="42" hits="0" branch="false"/>
+								<line number="44" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="main" signature="([Ljava/lang/String;)V" line-rate="0.0" branch-rate="0.0">
+							<lines>
+								<line number="11" hits="0" branch="false"/>
+								<line number="12" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="13" hits="0" branch="false"/>
+								<line number="15" hits="0" branch="false"/>
+								<line number="16" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="17" hits="0" branch="false"/>
+								<line number="19" hits="0" branch="false"/>
+								<line number="20" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="21" hits="0" branch="false"/>
+								<line number="22" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="23" hits="0" branch="false"/>
+								<line number="24" hits="0" branch="false"/>
+								<line number="26" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="27" hits="0" branch="false"/>
+								<line number="29" hits="0" branch="false"/>
+								<line number="31" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="println" signature="(Ljava/lang/String;)V" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="34" hits="0" branch="false"/>
+								<line number="35" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="8" hits="0" branch="false"/>
+						<line number="11" hits="0" branch="false"/>
+						<line number="12" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="13" hits="0" branch="false"/>
+						<line number="15" hits="0" branch="false"/>
+						<line number="16" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="17" hits="0" branch="false"/>
+						<line number="19" hits="0" branch="false"/>
+						<line number="20" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="21" hits="0" branch="false"/>
+						<line number="22" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="23" hits="0" branch="false"/>
+						<line number="24" hits="0" branch="false"/>
+						<line number="26" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="27" hits="0" branch="false"/>
+						<line number="29" hits="0" branch="false"/>
+						<line number="31" hits="0" branch="false"/>
+						<line number="34" hits="0" branch="false"/>
+						<line number="35" hits="0" branch="false"/>
+						<line number="38" hits="0" branch="false"/>
+						<line number="40" hits="0" branch="false"/>
+						<line number="41" hits="0" branch="false"/>
+						<line number="42" hits="0" branch="false"/>
+						<line number="44" hits="0" branch="false"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package name="com.adaptionsoft.games.uglytrivia" line-rate="1.0" branch-rate="0.9583333333333334" complexity="1.2702702702702702">
+			<classes>
+				<class name="com.adaptionsoft.games.uglytrivia.Game" filename="com/adaptionsoft/games/uglytrivia/Game.java" line-rate="1.0" branch-rate="0.875" complexity="1.3636363636363635">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="8" hits="4" branch="false"/>
+								<line number="9" hits="4" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="(Lcom/adaptionsoft/games/uglytrivia/GameQuestions;Lcom/adaptionsoft/games/uglytrivia/GamePlayers;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="11" hits="25" branch="false"/>
+								<line number="12" hits="25" branch="false"/>
+								<line number="13" hits="25" branch="false"/>
+								<line number="14" hits="25" branch="false"/>
+							</lines>
+						</method>
+						<method name="add" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="17" hits="49" branch="false"/>
+								<line number="18" hits="49" branch="false"/>
+							</lines>
+						</method>
+						<method name="roll" signature="(I)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="21" hits="4" branch="false"/>
+								<line number="23" hits="4" branch="true" condition-coverage="100% (4/4)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+										<condition number="1" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="24" hits="3" branch="false"/>
+								<line number="26" hits="4" branch="false"/>
+							</lines>
+						</method>
+						<method name="rollOutputMessage" signature="(I)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="29" hits="4" branch="false"/>
+								<line number="30" hits="4" branch="false"/>
+								<line number="31" hits="4" branch="false"/>
+							</lines>
+						</method>
+						<method name="rollWhenNotInPenaltyBox" signature="(I)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="34" hits="3" branch="false"/>
+								<line number="36" hits="3" branch="false"/>
+								<line number="38" hits="3" branch="false"/>
+								<line number="39" hits="3" branch="false"/>
+							</lines>
+						</method>
+						<method name="rollWhenNotInPenaltyBoxOutputMessage" signature="()V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="42" hits="3" branch="false"/>
+								<line number="45" hits="3" branch="false"/>
+								<line number="46" hits="3" branch="false"/>
+							</lines>
+						</method>
+						<method name="wasCorrectlyAnswered" signature="()Z" line-rate="1.0" branch-rate="0.75">
+							<lines>
+								<line number="49" hits="34" branch="false"/>
+								<line number="51" hits="34" branch="true" condition-coverage="75% (3/4)">
+									<conditions>
+										<condition number="0" type="jump" coverage="50%"/>
+										<condition number="1" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="52" hits="29" branch="false"/>
+								<line number="54" hits="29" branch="false"/>
+								<line number="56" hits="29" branch="false"/>
+								<line number="59" hits="34" branch="false"/>
+								<line number="61" hits="34" branch="false"/>
+							</lines>
+						</method>
+						<method name="wasCorrectlyAnsweredWhenCurrentPlayerNotInPenaltyBoxOutputMessage" signature="()V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="65" hits="29" branch="false"/>
+								<line number="66" hits="29" branch="false"/>
+								<line number="70" hits="29" branch="false"/>
+							</lines>
+						</method>
+						<method name="wrongAnswer" signature="()Z" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="73" hits="9" branch="false"/>
+								<line number="75" hits="9" branch="false"/>
+								<line number="77" hits="9" branch="false"/>
+								<line number="79" hits="9" branch="false"/>
+							</lines>
+						</method>
+						<method name="wrongAnswerOutputMessage" signature="()V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="83" hits="9" branch="false"/>
+								<line number="84" hits="9" branch="false"/>
+								<line number="85" hits="9" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="8" hits="4" branch="false"/>
+						<line number="9" hits="4" branch="false"/>
+						<line number="11" hits="25" branch="false"/>
+						<line number="12" hits="25" branch="false"/>
+						<line number="13" hits="25" branch="false"/>
+						<line number="14" hits="25" branch="false"/>
+						<line number="17" hits="49" branch="false"/>
+						<line number="18" hits="49" branch="false"/>
+						<line number="21" hits="4" branch="false"/>
+						<line number="23" hits="4" branch="true" condition-coverage="100% (4/4)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+								<condition number="1" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="24" hits="3" branch="false"/>
+						<line number="26" hits="4" branch="false"/>
+						<line number="29" hits="4" branch="false"/>
+						<line number="30" hits="4" branch="false"/>
+						<line number="31" hits="4" branch="false"/>
+						<line number="34" hits="3" branch="false"/>
+						<line number="36" hits="3" branch="false"/>
+						<line number="38" hits="3" branch="false"/>
+						<line number="39" hits="3" branch="false"/>
+						<line number="42" hits="3" branch="false"/>
+						<line number="45" hits="3" branch="false"/>
+						<line number="46" hits="3" branch="false"/>
+						<line number="49" hits="34" branch="false"/>
+						<line number="51" hits="34" branch="true" condition-coverage="75% (3/4)">
+							<conditions>
+								<condition number="0" type="jump" coverage="50%"/>
+								<condition number="1" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="52" hits="29" branch="false"/>
+						<line number="54" hits="29" branch="false"/>
+						<line number="56" hits="29" branch="false"/>
+						<line number="59" hits="34" branch="false"/>
+						<line number="61" hits="34" branch="false"/>
+						<line number="65" hits="29" branch="false"/>
+						<line number="66" hits="29" branch="false"/>
+						<line number="70" hits="29" branch="false"/>
+						<line number="73" hits="9" branch="false"/>
+						<line number="75" hits="9" branch="false"/>
+						<line number="77" hits="9" branch="false"/>
+						<line number="79" hits="9" branch="false"/>
+						<line number="83" hits="9" branch="false"/>
+						<line number="84" hits="9" branch="false"/>
+						<line number="85" hits="9" branch="false"/>
+					</lines>
+				</class>
+				<class name="com.adaptionsoft.games.uglytrivia.GamePlayers" filename="com/adaptionsoft/games/uglytrivia/GamePlayers.java" line-rate="1.0" branch-rate="1.0" complexity="1.0555555555555556">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="8" hits="42" branch="false"/>
+								<line number="10" hits="42" branch="false"/>
+								<line number="11" hits="42" branch="false"/>
+								<line number="12" hits="42" branch="false"/>
+								<line number="13" hits="42" branch="false"/>
+								<line number="14" hits="42" branch="false"/>
+							</lines>
+						</method>
+						<method name="add" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="19" hits="69" branch="false"/>
+								<line number="21" hits="69" branch="false"/>
+								<line number="23" hits="69" branch="false"/>
+								<line number="25" hits="69" branch="false"/>
+								<line number="26" hits="69" branch="false"/>
+							</lines>
+						</method>
+						<method name="addOutputMessage" signature="(Ljava/lang/String;I)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="45" hits="69" branch="false"/>
+								<line number="46" hits="69" branch="false"/>
+								<line number="47" hits="69" branch="false"/>
+							</lines>
+						</method>
+						<method name="currentPlayerGoIntoPenaltyBox" signature="()V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="60" hits="10" branch="false"/>
+								<line number="61" hits="10" branch="false"/>
+							</lines>
+						</method>
+						<method name="currentPlayerMoveToNext" signature="()V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="84" hits="47" branch="false"/>
+								<line number="85" hits="47" branch="false"/>
+							</lines>
+						</method>
+						<method name="currentPlayerPurseIncreasedByOne" signature="()V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="76" hits="41" branch="false"/>
+								<line number="77" hits="41" branch="false"/>
+							</lines>
+						</method>
+						<method name="getAllPlayerInPenaltyBox" signature="()[Z" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="41" hits="4" branch="false"/>
+							</lines>
+						</method>
+						<method name="getAllPlayerPlaces" signature="()[I" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="33" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="getAllPlayerPurses" signature="()[I" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="37" hits="7" branch="false"/>
+							</lines>
+						</method>
+						<method name="getAllPlayers" signature="()Ljava/util/List;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="29" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="getCurrentPlayer" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="64" hits="49" branch="false"/>
+							</lines>
+						</method>
+						<method name="getCurrentPlayerPlace" signature="()I" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="72" hits="5" branch="false"/>
+							</lines>
+						</method>
+						<method name="getCurrentPlayerPurse" signature="()I" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="80" hits="30" branch="false"/>
+							</lines>
+						</method>
+						<method name="getIsGettingOutOfPenaltyBox" signature="()Z" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="102" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="initializePlayerStatus" signature="(I)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="50" hits="69" branch="false"/>
+								<line number="51" hits="69" branch="false"/>
+								<line number="52" hits="69" branch="false"/>
+								<line number="53" hits="69" branch="false"/>
+							</lines>
+						</method>
+						<method name="isCurrentPlayerInPenaltyBox" signature="()Z" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="56" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="isCurrentPlayerNotWin" signature="()Z" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="88" hits="35" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+							</lines>
+						</method>
+						<method name="isGettingOutOfPenaltyBox" signature="(I)Z" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="92" hits="2" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="93" hits="2" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="94" hits="1" branch="false"/>
+								<line number="96" hits="1" branch="false"/>
+								<line number="98" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="setCurrentPlayerPlace" signature="(I)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="68" hits="7" branch="false"/>
+								<line number="69" hits="7" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="8" hits="42" branch="false"/>
+						<line number="10" hits="42" branch="false"/>
+						<line number="11" hits="42" branch="false"/>
+						<line number="12" hits="42" branch="false"/>
+						<line number="13" hits="42" branch="false"/>
+						<line number="14" hits="42" branch="false"/>
+						<line number="19" hits="69" branch="false"/>
+						<line number="21" hits="69" branch="false"/>
+						<line number="23" hits="69" branch="false"/>
+						<line number="25" hits="69" branch="false"/>
+						<line number="26" hits="69" branch="false"/>
+						<line number="29" hits="2" branch="false"/>
+						<line number="33" hits="1" branch="false"/>
+						<line number="37" hits="7" branch="false"/>
+						<line number="41" hits="4" branch="false"/>
+						<line number="45" hits="69" branch="false"/>
+						<line number="46" hits="69" branch="false"/>
+						<line number="47" hits="69" branch="false"/>
+						<line number="50" hits="69" branch="false"/>
+						<line number="51" hits="69" branch="false"/>
+						<line number="52" hits="69" branch="false"/>
+						<line number="53" hits="69" branch="false"/>
+						<line number="56" hits="1" branch="false"/>
+						<line number="60" hits="10" branch="false"/>
+						<line number="61" hits="10" branch="false"/>
+						<line number="64" hits="49" branch="false"/>
+						<line number="68" hits="7" branch="false"/>
+						<line number="69" hits="7" branch="false"/>
+						<line number="72" hits="5" branch="false"/>
+						<line number="76" hits="41" branch="false"/>
+						<line number="77" hits="41" branch="false"/>
+						<line number="80" hits="30" branch="false"/>
+						<line number="84" hits="47" branch="false"/>
+						<line number="85" hits="47" branch="false"/>
+						<line number="88" hits="35" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="92" hits="2" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="93" hits="2" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="94" hits="1" branch="false"/>
+						<line number="96" hits="1" branch="false"/>
+						<line number="98" hits="2" branch="false"/>
+						<line number="102" hits="2" branch="false"/>
+					</lines>
+				</class>
+				<class name="com.adaptionsoft.games.uglytrivia.GameQuestions" filename="com/adaptionsoft/games/uglytrivia/GameQuestions.java" line-rate="1.0" branch-rate="1.0" complexity="1.625">
+					<methods>
+						<method name="&lt;clinit&gt;" signature="()V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="36" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="7" hits="80" branch="false"/>
+								<line number="8" hits="80" branch="false"/>
+								<line number="9" hits="80" branch="false"/>
+								<line number="10" hits="80" branch="false"/>
+								<line number="12" hits="80" branch="false"/>
+								<line number="13" hits="4080" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="14" hits="4000" branch="false"/>
+								<line number="16" hits="80" branch="false"/>
+							</lines>
+						</method>
+						<method name="askQuestion" signature="(I)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="26" hits="80" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="27" hits="20" branch="false"/>
+								<line number="28" hits="80" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="29" hits="20" branch="false"/>
+								<line number="30" hits="80" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="31" hits="20" branch="false"/>
+								<line number="32" hits="80" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="33" hits="20" branch="false"/>
+								<line number="34" hits="80" branch="false"/>
+							</lines>
+						</method>
+						<method name="currentCategory" signature="(I)Ljava/lang/String;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="40" hits="332" branch="false"/>
+							</lines>
+						</method>
+						<method name="getPopQuestions" signature="()Ljava/util/LinkedList;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="44" hits="5" branch="false"/>
+							</lines>
+						</method>
+						<method name="getRockQuestions" signature="()Ljava/util/LinkedList;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="56" hits="5" branch="false"/>
+							</lines>
+						</method>
+						<method name="getScienceQuestions" signature="()Ljava/util/LinkedList;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="48" hits="5" branch="false"/>
+							</lines>
+						</method>
+						<method name="getSportsQuestions" signature="()Ljava/util/LinkedList;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="52" hits="5" branch="false"/>
+							</lines>
+						</method>
+						<method name="initializeQuestions" signature="(I)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="19" hits="4000" branch="false"/>
+								<line number="20" hits="4000" branch="false"/>
+								<line number="21" hits="4000" branch="false"/>
+								<line number="22" hits="4000" branch="false"/>
+								<line number="23" hits="4000" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="7" hits="80" branch="false"/>
+						<line number="8" hits="80" branch="false"/>
+						<line number="9" hits="80" branch="false"/>
+						<line number="10" hits="80" branch="false"/>
+						<line number="12" hits="80" branch="false"/>
+						<line number="13" hits="4080" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="14" hits="4000" branch="false"/>
+						<line number="16" hits="80" branch="false"/>
+						<line number="19" hits="4000" branch="false"/>
+						<line number="20" hits="4000" branch="false"/>
+						<line number="21" hits="4000" branch="false"/>
+						<line number="22" hits="4000" branch="false"/>
+						<line number="23" hits="4000" branch="false"/>
+						<line number="26" hits="80" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="27" hits="20" branch="false"/>
+						<line number="28" hits="80" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="29" hits="20" branch="false"/>
+						<line number="30" hits="80" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="31" hits="20" branch="false"/>
+						<line number="32" hits="80" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="33" hits="20" branch="false"/>
+						<line number="34" hits="80" branch="false"/>
+						<line number="36" hits="1" branch="false"/>
+						<line number="40" hits="332" branch="false"/>
+						<line number="44" hits="5" branch="false"/>
+						<line number="48" hits="5" branch="false"/>
+						<line number="52" hits="5" branch="false"/>
+						<line number="56" hits="5" branch="false"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+	</packages>
+</coverage>
